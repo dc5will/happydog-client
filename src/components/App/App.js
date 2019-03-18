@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
+import LandingPage from '../LandingPage/LandingPage';
 import './App.css';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
           <Header />
         </header>
         <main className='App_main'>
+          <LandingPage />
           <Switch>
             {/* TODO: Start setting up Routes here */}
             <Route />
