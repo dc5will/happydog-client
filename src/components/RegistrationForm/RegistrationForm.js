@@ -1,8 +1,24 @@
 import React, { Component } from "react";
 import { Button, Required, Input } from '../Utils/Utils'
-import Footer from '../Footer/Footer'
 
 export default class RegistrationForm extends Component {
+  static defaultProps = {
+    onRegistrationSuccess: () => {}
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+    const { full_name, user_name, password } = event.target;
+
+    console.log('successful submission')
+    console.log({ full_name, user_name, password })
+
+    full_name.value = ''
+    user_name.value = ''
+    password.value = ''
+    this.props.onRegistrationSuccess()
+  }
+
   render() {
     return (
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
