@@ -55,17 +55,3 @@ ul {
 .reset-daily-checklist {
     margin-top: 20px;
 }
-
-.footer {
-    display: flex;
-    height: 80px;
-    align-items: row;
-    justify-content: center;
-    background-color: rgb(218, 137, 137);
-    color: white;
-}
-
-.footer p {
-    font-size: 16px;
-    margin-top: 5px;
-}

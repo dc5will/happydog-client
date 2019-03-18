@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Required, Input } from '../Utils/Utils'
+import Footer from '../Footer/Footer'
 
 export default class RegistrationForm extends Component {
   render() {

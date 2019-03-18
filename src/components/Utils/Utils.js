@@ -18,3 +18,14 @@ export function Required({ className, ...props }) {
         </span>
     )
 }
+
+export function Section({ className, list, ...props }) {
+    const classes = [
+        'Section',
+        list && 'Section-list',
+        className,
+    ]
+    return (
+        <section className={classes} {...props} />
+    )
+}
