@@ -1,0 +1,36 @@
+.Header {
+    display: flex;
+    height: 60px;
+    align-items: normal;
+    justify-content: space-between;
+    background-color: rgb(218, 137, 137);
+}
+
+.Header h1 {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+}
+
+.Header a {
+    color: white;
+    text-decoration: none;
+}
+
+.Header_not-logged-in {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Header_not-logged-in a:last-child {
+    background: lightblue;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    margin-left: 10px;
+}
