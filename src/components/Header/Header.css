@@ -21,7 +21,7 @@ h1 {
     margin: 5px 20px;
 }
 
-.Header_not-logged-in {
+.Header_not-logged-in, .Header_logged-in {
     display: flex;
     flex: 1;
     align-items: center;
@@ -30,3 +30,4 @@ h1 {
     text-transform: uppercase;
     font-size: 18px;
 }
+

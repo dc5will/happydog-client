@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import LandingPage from '../../routes/LandingPage/LandingPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import HomePage from '../../routes/HomePage/HomePage'
 import AddNote from '../../routes/AddNote/AddNote'
-import PublicOnlyRoute from '../Utils/PublicRoute';
-import PrivateRoute from '../Utils/PrivateRoute';
+// import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
+// import PrivateRoute from '../Utils/PrivateRoute';
 import './App.css';
 
 class App extends Component {
@@ -19,24 +19,24 @@ class App extends Component {
         </header>
         <main className='App_main'>
           <Switch>
-            <PublicOnlyRoute 
+            <Route 
               exact
               path={'/'}
               component={LandingPage}
             />
-            <PublicOnlyRoute
+            <Route
               path={'/register'}
               component={RegistrationPage}
             />
-            <PublicOnlyRoute
+            <Route
               path={'/login'}
               component={LoginPage}
             />
-            <PrivateRoute
+            <Route
               path={'/homepage'}
               component={HomePage}
             />
-            <PrivateRoute
+            <Route
               path={'/addnote'}
               component={AddNote}
             />

@@ -4,7 +4,6 @@ import "./Header.css";
 import TokenService from "../../services/token-service";
 
 export default class Header extends Component {
-
   handleLogoutClick = () => {
     TokenService.clearAuthToken();
   }
@@ -43,7 +42,9 @@ export default class Header extends Component {
           <h1>
             <Link to="/">Happy dog</Link>
           </h1>
-          {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
+          {TokenService.hasAuthToken()
+          ? this.renderLogoutLink()
+          : this.renderLoginLink()}
         </nav>
       </React.Fragment>
     );

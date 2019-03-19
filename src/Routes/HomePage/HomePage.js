@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Footer from '../../components/Footer/Footer'
 import Checklist from '../../components/Checklist/Checklist'
-import Journal from '../../components/Journal/Journal'
+// import Note from '../../components/Note/Note'
 import "./HomePage.css";
 
 export default class LandingPage extends Component {
@@ -17,7 +17,7 @@ export default class LandingPage extends Component {
         </section>
 
         <section>
-            <Journal />
+
         </section>
         <Footer />
       </React.Fragment>
