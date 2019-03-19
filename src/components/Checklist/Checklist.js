@@ -47,8 +47,6 @@ export default class Checklist extends Component {
                 </header>
                 <label>
                     <Checkbox
-                        checked={this.state.checked}
-                        onChange={this.handleCheckboxChange}
                         />
                         <span>Morning</span>
                 </label><br/>
@@ -65,7 +63,8 @@ export default class Checklist extends Component {
                         // onChange={this.handleCheckboxChange}
                         />
                         <span>Night time</span>
-                </label>
+                </label><br/>
+                <button>Reset Daily Checklist</button>
                 </React.Fragment>
         );
     }

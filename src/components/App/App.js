@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
-import LandingPage from '../../Routes/LandingPage/LandingPage'
-import RegistrationPage from '../../Routes/RegistrationPage/RegistrationPage'
-import HomePage from '../../Routes/HomePage/HomePage'
+import LandingPage from '../../routes/LandingPage/LandingPage'
+import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
+import LoginPage from '../../routes/LoginPage/LoginPage'
+import HomePage from '../../routes/HomePage/HomePage'
+import AddNote from '../../routes/AddNote/AddNote'
 import './App.css';
 
 class App extends Component {
@@ -26,7 +28,15 @@ class App extends Component {
             />
             <Route
               path={'/login'}
+              component={LoginPage}
+            />
+            <Route
+              path={'/homepage'}
               component={HomePage}
+            />
+            <Route
+              path={'/addnote'}
+              component={AddNote}
             />
           </Switch>
         </main>
