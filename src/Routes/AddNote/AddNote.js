@@ -1,5 +1,6 @@
 import React from 'react';
 import config from '../../config';
+import AppContext from '../../contexts/AppContext';
 
 class AddNote extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class AddNote extends React.Component {
         this.contentInput = React.createRef();
         this.folderInput = React.createRef();
     }
-    // static contextType = AppContext;
+    static contextType = AppContext;
 
     populateOptions () {
         const folders = this.context.folders.map(folder => {

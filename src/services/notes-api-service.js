@@ -1,4 +1,4 @@
-import TokenService from '../services/token-service';
+// import TokenService from '../services/token-service';
 import config from '../config'
 
 const NotesApiService = {
@@ -12,12 +12,10 @@ const NotesApiService = {
                 resp.json()
             )
     },
-    // needs to be protected by basic auth
+
     getNote(noteId) {
         return fetch(`${config.API_ENDPOINT}/notes/${noteId}`, {
-                headers: {
-                    'Authorization': `Bearer ${TokenService.getAuthToken()}`
-                },
+                headers: {},
             })
             .then(resp =>
                 (!resp.ok) ?
