@@ -35,12 +35,13 @@ export default class Header extends Component {
     )
   }
 
+
   render() {
     return (
       <React.Fragment>
         <nav className="Header">
           <h1>
-            <Link to="/">Happy dog</Link>
+            <Link to="/homepage">Happy dog</Link>
           </h1>
           {TokenService.hasAuthToken()
           ? this.renderLogoutLink()

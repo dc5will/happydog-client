@@ -64,7 +64,7 @@ export default class Checklist extends Component {
                         />
                         <span>Night time</span>
                 </label><br/>
-                <button>Reset Daily Checklist</button>
+                <button className='resetButton'>Reset Daily Checklist</button>
                 </React.Fragment>
         );
     }

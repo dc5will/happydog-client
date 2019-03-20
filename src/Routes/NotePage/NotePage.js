@@ -2,8 +2,14 @@ import React, { Component } from 'react'
 import NoteContext from '../../contexts/NoteContext'
 import NoteApiService from '../../services/note-api-service'
 import { Section } from '../../components/Utils/Utils'
-import ReviewForm from '../../components/ReviewForm/ReviewForm'
-import './NotePage.css'
+
+function NoteContent({ note }) {
+  return (
+    <p className='NotePage_content'>
+      {note.content}
+    </p>
+  )
+}
 
 export default class NotePage extends Component {
   static defaultProps = {
@@ -28,13 +34,11 @@ export default class NotePage extends Component {
   }
 
   renderNote() {
-    const { note, reviews } = this.context
+    const { note } = this.context
     return <>
       <div className='NotePage__image' style={{backgroundImage: `url(${note.image})`}} />
       <h2>{note.title}</h2>
       <NoteContent note={note} />
-      <NoteReviews reviews={reviews} />
-      <ReviewForm />
     </>
   }
 
@@ -58,32 +62,5 @@ export default class NotePage extends Component {
   }
 }
 
-function NoteContent({ note }) {
-  return (
-    <p className='NotePage__content'>
-      {note.content}
-    </p>
-  )
-}
 
-function NoteReviews({ reviews = [] }) {
-  return (
-    <ul className='NotePage__review-list'>
-      {reviews.map(review =>
-        <li key={review.id} className='NotePage__review'>
-          <p className='NotePage__review-text'>
-            <FontAwesomeIcon
-              size='lg'
-              icon='quote-left'
-              className='NotePage__review-icon blue'
-            />
-            {review.text}
-          </p>
-          <p className='NotePage__review-user'>
-            {review.user.full_name}
-          </p>
-        </li>
-      )}
-    </ul>
-  )
-}
+

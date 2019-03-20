@@ -1,6 +1,7 @@
 import React from 'react';
 import AppContext from '../../../contexts/AppContext';
 import config from '../../../config';
+import './AddFolder.css'
 
 class AddFolder extends React.Component {
     constructor(props) {
@@ -76,7 +77,7 @@ class AddFolder extends React.Component {
                         <input type="text" placeholder="Folder name" id="folder-name-input" name="folder-name-input" onChange={event => this.updateName(event.target.value)}/>
                         {(!this.state.nameValid && this.state.nameValidationMessage) && <p className="error__message">{this.state.nameValidationMessage}</p>}
                     </div>
-                    <button type="submit" disabled={!this.state.nameValid}>Add Folder</button>
+                    <button className='addFolderButton' type="submit" disabled={!this.state.nameValid}>Add Folder</button>
                 </form>
             </section>
         );

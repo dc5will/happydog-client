@@ -15,7 +15,6 @@ const AuthApiService = {
           : res.json()
       )
   },
-  // TODO: added new method for posting user data to server
   postUser(user) {
     return fetch(`${config.API_ENDPOINT}/users`, {
       method: 'POST',

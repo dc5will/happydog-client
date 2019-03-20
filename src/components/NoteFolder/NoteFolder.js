@@ -14,7 +14,6 @@ export default class NoteFolder extends Component {
     super(props)
     this.state = {
       folders: [], notes: [], 
-      loading: true,
       error: null,
     }
   }
@@ -152,7 +151,7 @@ export default class NoteFolder extends Component {
 
   render() {
     return (
-      <AppContext.Provider value={
+      <AppContext.Provider value= {
         {...this.state,
             handleDeleteNote: this.handleDeleteNote, 
             handleDeleteFolder: this.handleDeleteFolder,

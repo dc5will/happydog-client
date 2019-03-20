@@ -4,22 +4,22 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './components/App/App';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import './index.css';
-// import { NoteListProvider } from './contexts/NoteListContext';
-// import { NoteProvider } from './contexts/NoteContext';
 
 import {
     faPenAlt,
-    faTrash
+    faTrash,
+    faIgloo
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
     faPenAlt,
-    faTrash
+    faTrash,
+    faIgloo
 )
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+            <App />
     </BrowserRouter>,
     document.getElementById('root')
 );
