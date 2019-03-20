@@ -19,7 +19,7 @@ class NoteList extends React.Component {
     }
   }
 
-  jsxNotes = (notes) => {
+  showNotes = (notes) => {
     return notes.map((note) => {
         return (
             <li key={note.id} id={note.id}>
@@ -36,7 +36,7 @@ class NoteList extends React.Component {
     return (
       <>
         <ul>
-          {this.jsxNotes(notesToShow)}
+          {this.showNotes(notesToShow)}
         </ul>
         <Link to='/AddNote'><button>Add Note</button></Link>
       </>

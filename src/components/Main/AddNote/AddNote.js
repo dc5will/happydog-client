@@ -15,6 +15,7 @@ class AddNote extends React.Component {
         this.contentInput = React.createRef();
         this.folderInput = React.createRef();
     }
+
     static contextType = AppContext;
 
     populateOptions () {
@@ -105,7 +106,7 @@ class AddNote extends React.Component {
                 <form onSubmit={(event => this.handleSubmit(event))}>
                     <div>
                         <label htmlFor="note-name-input">Name</label><br/>
-                        <input type="text" placeholder="Note name..." id="note-name-input" name="note-name-input" value={this.state.name} onChange={event => this.updateName(event.target.value)} required/>
+                        <input type="text" placeholder="Note name" id="note-name-input" name="note-name-input" value={this.state.name} onChange={event => this.updateName(event.target.value)} required/>
                         {(!this.state.nameValid && this.state.nameValidationMessage) && <p className="error__message">{this.state.nameValidationMessage}</p>}<br/>
                         <label htmlFor="content-input">content</label><br/>
                         <textarea type="text" placeholder="content" id="note-content-input" name="note-content-input" ref={this.contentInput} required></textarea>

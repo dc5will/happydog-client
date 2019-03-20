@@ -11,8 +11,8 @@ const NoteContext = React.createContext({
   error: null,
   setError: () => {},
   clearError: () => { },
-  setnote: () => {},
-  clearnote: () => {},
+  setNote: () => {},
+  clearNote: () => {},
   setReviews: () => {},
   addReview: () => {},
 })
@@ -34,7 +34,7 @@ export class NoteProvider extends Component {
     this.setState({ error: null })
   }
 
-  setnote = note => {
+  setNote = note => {
     this.setState({ note })
   }
 
@@ -42,8 +42,8 @@ export class NoteProvider extends Component {
     this.setState({ reviews })
   }
 
-  clearnote = () => {
-    this.setnote(nullnote)
+  clearNote = () => {
+    this.setNote(nullnote)
     this.setReviews([])
   }
 
@@ -61,9 +61,9 @@ export class NoteProvider extends Component {
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setnote: this.setnote,
+      setNote: this.setNote,
       setReviews: this.setReviews,
-      clearnote: this.clearnote,
+      clearNote: this.clearNote,
       addReview: this.addReview,
     }
     return (

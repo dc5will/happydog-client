@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 import NoteList from '../Main/NoteList/NoteList';
-import NoteFull from '../Main/Notefull/Notefull';
+import NoteId from '../Main/NoteId/NoteId';
 import FolderList from '../Nav/FolderList';
 import NoteNav from '../Nav/NoteNav';
 import AppContext from '../../contexts/AppContext';
@@ -98,7 +98,7 @@ export default class NoteFolder extends Component {
       />
       <Route
         path="homepage/note/:noteId"
-        component={NoteFull}
+        component={NoteId}
       />
       <Route
         path="homepage/AddNote"
@@ -152,7 +152,8 @@ export default class NoteFolder extends Component {
 
   render() {
     return (
-      <AppContext.Provider value={{...this.state,
+      <AppContext.Provider value={
+        {...this.state,
             handleDeleteNote: this.handleDeleteNote, 
             handleDeleteFolder: this.handleDeleteFolder,
             addFolder: this.addFolder, 

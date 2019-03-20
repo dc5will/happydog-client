@@ -28,7 +28,7 @@ class FolderList extends React.Component {
       })
       .then(() => {
         if (this.props.history) {
-          this.props.history.push('/')
+          this.props.history.push('/homepage')
         }
         this.context.handleDeleteFolder(folderId);
       })
@@ -65,7 +65,7 @@ class FolderList extends React.Component {
     this.setState({ updatingId: folderId });
   }
 
-  getJsxFolders = (folders) => {
+  getFolders = (folders) => {
     return folders.map((folder) => {
       return (
         <React.Fragment key={folder.id}>
@@ -102,7 +102,7 @@ class FolderList extends React.Component {
     return (
       <>
         <ul>
-          {this.getJsxFolders(folders)}
+          {this.getFolders(folders)}
         </ul>
         <Link to="/addfolder">
           <button id="AddFolder">Add Folder</button>
