@@ -6,6 +6,7 @@ import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import HomePage from '../../routes/HomePage/HomePage'
 import AddNote from '../../routes/AddNote/AddNote'
+import AddFolder from '../../routes/AddFolder/AddFolder'
 // import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 // import PrivateRoute from '../Utils/PrivateRoute';
 import './App.css';
@@ -39,6 +40,10 @@ class App extends Component {
             <Route
               path={'/addnote'}
               component={AddNote}
+            />
+            <Route
+              path={'/addfolder'}
+              component={AddFolder}
             />
           </Switch>
         </main>
