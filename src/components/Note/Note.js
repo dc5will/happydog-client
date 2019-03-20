@@ -13,7 +13,7 @@ class Note extends React.Component {
   }
 
   handleDeleteNoteNote = () => {
-    fetch(`${config.API_ENDPOINT}notes/${this.props.id}`, {
+    fetch(`${config.API_ENDPOINT}/notes/${this.props.id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',

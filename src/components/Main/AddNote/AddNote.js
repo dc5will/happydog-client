@@ -1,6 +1,6 @@
 import React from 'react';
-import config from '../../config';
-import AppContext from '../../contexts/AppContext';
+import config from '../../../config';
+import AppContext from '../../../contexts/AppContext';
 
 class AddNote extends React.Component {
     constructor(props) {
@@ -101,11 +101,11 @@ class AddNote extends React.Component {
     render() {
         return (
             <section>
-                <h2>Add Important Note</h2>
+                <h2>Add Note</h2>
                 <form onSubmit={(event => this.handleSubmit(event))}>
                     <div>
                         <label htmlFor="note-name-input">Name</label><br/>
-                        <input type="text" placeholder="title" id="note-name-input" name="note-name-input" value={this.state.name} onChange={event => this.updateName(event.target.value)} required/>
+                        <input type="text" placeholder="Note name..." id="note-name-input" name="note-name-input" value={this.state.name} onChange={event => this.updateName(event.target.value)} required/>
                         {(!this.state.nameValid && this.state.nameValidationMessage) && <p className="error__message">{this.state.nameValidationMessage}</p>}<br/>
                         <label htmlFor="content-input">content</label><br/>
                         <textarea type="text" placeholder="content" id="note-content-input" name="note-content-input" ref={this.contentInput} required></textarea>

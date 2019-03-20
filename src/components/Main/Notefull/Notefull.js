@@ -1,6 +1,6 @@
 import React from 'react';
-import AppContext from '../../contexts/AppContext';
-import Note from '../Note/Note';
+import AppContext from '../../../contexts/AppContext';
+import Note from '../../Note/Note';
 
 class NoteFull extends React.Component {
     static defaultProps = {

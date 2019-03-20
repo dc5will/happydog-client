@@ -6,8 +6,8 @@ function Folder(props) {
   return (
     <li>
       <Link to={`/folder/${folderId}`} className="folderContainer">{props.folder.folder_name}</Link>
-      <button className="delete" onClick={() => props.handleDeleteFolder(folderId)}><i className="fa fa-trash"/></button> 
-      <button className="update" onClick={() => props.showUpdateFolderForm(folderId)}><i className="fas fa-edit"/></button>
+      <button className="update" onClick={() => props.showUpdateFolderForm(folderId)}>edit</button>
+      <button className="delete" onClick={() => props.handleDeleteFolder(folderId)}>x</button> 
     </li>
   );
 }

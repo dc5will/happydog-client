@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Footer from '../../components/Footer/Footer'
 import Checklist from '../../components/Checklist/Checklist'
-import NoteList from '../../components/NoteList/NoteList'
+import NoteList from '../../components/Main/NoteList/NoteList';
 import NotesApiService from '../../services/notes-api-service';
 import NoteListContext from '../../contexts/NoteListContext';
 import NoteListItem from '../../components/NoteListItem/NoteListItem';
+import NoteFolder from '../../components/NoteFolder/NoteFolder';
 import "./HomePage.css";
 
 export default class LandingPage extends Component {
@@ -41,6 +42,7 @@ export default class LandingPage extends Component {
         <section>
             {this.renderNotes()}
             <NoteList />
+            <NoteFolder />
         </section>
         <Footer />
       </React.Fragment>

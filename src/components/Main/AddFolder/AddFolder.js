@@ -1,6 +1,6 @@
 import React from 'react';
-import AppContext from '../../contexts/AppContext';
-import config from '../../config';
+import AppContext from '../../../contexts/AppContext';
+import config from '../../../config';
 
 class AddFolder extends React.Component {
     constructor(props) {
@@ -51,7 +51,7 @@ class AddFolder extends React.Component {
             },
             body: JSON.stringify({folder_name: name})
         }
-        fetch(`${config.API_ENDPOINT}folders/`, options)
+        fetch(`${config.API_ENDPOINT}/folders/`, options)
             .then(resp => {
                 if (!resp.ok) {
                     throw new Error('Something went wrong')

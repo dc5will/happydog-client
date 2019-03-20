@@ -1,6 +1,6 @@
 import React from 'react';
-import Note from '../Note/Note';
-import AppContext from '../../contexts/AppContext';
+import Note from '../../Note/Note';
+import AppContext from '../../../contexts/AppContext';
 import { Link } from 'react-router-dom';
 
 class NoteList extends React.Component {

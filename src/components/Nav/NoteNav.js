@@ -21,7 +21,6 @@ class NoteNav extends React.Component {
     return (
       <>
         <p>{this.props.match.params.noteId && this.getFolderNameFromNoteId(this.props.match.params.noteId)}</p>
-        />
       </>
     );
   }
