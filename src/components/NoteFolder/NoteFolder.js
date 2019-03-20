@@ -163,9 +163,9 @@ export default class NoteFolder extends Component {
           <section>
             {this.renderNavigationComponent()}
           </section>
-          <section>
+          {/* <section>
             {this.renderMainComponent()}
-          </section>
+          </section> */}
       </AppContext.Provider>
     );
   }

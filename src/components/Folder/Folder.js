@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Folder.css'
 
 function Folder(props) {
   const folderId = props.folder.id;

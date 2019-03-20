@@ -80,8 +80,6 @@ function NoteReviews({ reviews = [] }) {
             {review.text}
           </p>
           <p className='NotePage__review-user'>
-            <NoteStarRating rating={review.rating} />
-            <Hyph />
             {review.user.full_name}
           </p>
         </li>

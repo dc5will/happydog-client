@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Footer from '../../components/Footer/Footer'
 import Checklist from '../../components/Checklist/Checklist'
-import NoteList from '../../components/Main/NoteList/NoteList';
+// import NoteList from '../../components/Main/NoteList/NoteList';
 import NotesApiService from '../../services/notes-api-service';
 import NoteListContext from '../../contexts/NoteListContext';
 import NoteListItem from '../../components/NoteListItem/NoteListItem';
@@ -40,7 +40,7 @@ export default class LandingPage extends Component {
         </section>
 
         <section>
-            {this.renderNotes()}
+            {/* {this.renderNotes()} */}
             {/* <NoteList /> */}
             <NoteFolder />
         </section>

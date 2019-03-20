@@ -9,7 +9,7 @@ const NoteListContext = React.createContext({
 })
 export default NoteListContext
 
-export class noteListProvider extends Component {
+export class NoteListProvider extends Component {
   state = {
     noteList: [],
     error: null,
