@@ -6,7 +6,7 @@ class AddNote extends React.Component {
     constructor(props) {
         super(props);
         this.state = {  
-            note_name: '',
+            note_title: '',
             nameValid: false,
             nameValidationMessage: '',
             contentValid: false,
@@ -24,8 +24,8 @@ class AddNote extends React.Component {
         return folders;
     }
 
-    updateName(note_name) {
-        this.setState({note_name}, () => {this.validateName(note_name)});
+    updateName(note_title) {
+        this.setState({note_title}, () => {this.validateName(note_title)});
     }
 
     validateName(name) {
@@ -71,7 +71,7 @@ class AddNote extends React.Component {
         const content = this.contentInput.current.value;
         this.validateContent(content);
         const folder_id = this.folderInput.current.value;
-        const { note_name } = this.state;
+        const { note_title } = this.state;
 
         const options = {
             method: 'POST',
@@ -79,7 +79,7 @@ class AddNote extends React.Component {
                 'content-type': 'application/json',
                 'Authorization': `Bearer ${config.API_KEY}`
             },
-            body: JSON.stringify({note_name, folder_id, content})
+            body: JSON.stringify({note_title, folder_id, content})
         }
         fetch(`${config.API_ENDPOINT}/notes`, options)
             .then(resp => {

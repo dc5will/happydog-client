@@ -16,7 +16,7 @@ class NoteFull extends React.Component {
         const note = notes.find(note => note.id === noteId) || {};
         return (
             <>
-                <Note id={note.id} name={note.note_name} modified={note.modified} history={this.props.history}/>
+                <Note id={note.id} name={note.note_title} modified={note.modified} history={this.props.history}/>
                 <p>{note.content}</p>
             </>
         );

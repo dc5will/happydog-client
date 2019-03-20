@@ -23,7 +23,7 @@ class NoteList extends React.Component {
     return notes.map((note) => {
         return (
             <li key={note.id} id={note.id}>
-              <Note id={note.id} name={note.note_name} modified={note.modified} />
+              <Note id={note.id} name={note.note_title} modified={note.modified} />
             </li>
         );
     });

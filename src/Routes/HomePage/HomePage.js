@@ -41,7 +41,7 @@ export default class LandingPage extends Component {
 
         <section>
             {this.renderNotes()}
-            <NoteList />
+            {/* <NoteList /> */}
             <NoteFolder />
         </section>
         <Footer />
