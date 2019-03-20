@@ -91,14 +91,13 @@ class AddNote extends React.Component {
             })
             .then(respJson => {
                 this.context.addNote(respJson);
-                this.props.history.push(`/note/${respJson.id}`);
+                this.props.history.push(`/homepage`);
             })
             .catch(error => {
                 console.log(error.message);
             });
     }
     
-
     render() {
         return (
             <section>

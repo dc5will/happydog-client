@@ -9,11 +9,13 @@ import AddFolder from '../Main/AddFolder/AddFolder';
 import AddNote from '../Main/AddNote/AddNote';
 import config from '../../config';
 
+
 export default class NoteFolder extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      folders: [], notes: [], 
+      folders: [], 
+      notes: [], 
       error: null,
     }
   }
@@ -160,6 +162,7 @@ export default class NoteFolder extends Component {
             handleUpdateFolder: this.handleUpdateFolder
         }}>
           <section>
+            <h3>Important Notes</h3>
             {this.renderNavigationComponent()}
           </section>
           {/* <section>

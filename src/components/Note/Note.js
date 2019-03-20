@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AppContext from '../../contexts/AppContext';
 import PropTypes from 'prop-types';
 import config from '../../config';
+import './Note.css';
 
 class Note extends React.Component {
   static contextType = AppContext;
@@ -38,7 +39,7 @@ class Note extends React.Component {
     return (
       <div className="note">
         <h3><Link to={`/note/${this.props.id}`} >{this.props.name}</Link></h3>
-        <button className="delete" onClick={() => this.handleDeleteNoteNote()}>Delete</button>
+        <button className="deleteButton" onClick={() => this.handleDeleteNoteNote()}>x</button>
       </div>
     );
   }

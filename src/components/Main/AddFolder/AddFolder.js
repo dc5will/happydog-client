@@ -60,7 +60,7 @@ class AddFolder extends React.Component {
             })
             .then(respJson => {
                 this.context.addFolder(respJson);
-                this.props.history.push(`/folder/${respJson.id}`);
+                this.props.history.push(`/homepage`);
             })
             .catch(error => {
                 console.log(error.message);

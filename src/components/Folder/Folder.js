@@ -12,7 +12,7 @@ function Folder(props) {
     </li>
     
   );
-}
+} 
 
 Folder.defaultProps = {
   folder: {},

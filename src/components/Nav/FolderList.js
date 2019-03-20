@@ -44,7 +44,6 @@ class FolderList extends React.Component {
       body: JSON.stringify(newFolder),
       headers: {
         'content-type': 'application/json',
-        'Authorization': `Bearer ${config.API_KEY}`
       }
     })
       .then(res => {
