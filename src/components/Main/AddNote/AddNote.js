@@ -18,12 +18,12 @@ class AddNote extends React.Component {
 
     static contextType = AppContext;
 
-    populateOptions () {
-        const folders = this.context.folders.map(folder => {
-            return <option key={folder.id} value={folder.id}>{folder.folder_name}</option>
-        });
-        return folders;
-    }
+    // populateOptions () {
+    //     const folders = this.context.folders.map(folder => {
+    //         return <option key={folder.id} value={folder.id}>{folder.folder_name}</option>
+    //     });
+    //     return folders;
+    // }
 
     updateName(note_title) {
         this.setState({note_title}, () => {this.validateName(note_title)});
@@ -71,7 +71,7 @@ class AddNote extends React.Component {
 
         const content = this.contentInput.current.value;
         this.validateContent(content);
-        const folder_id = this.folderInput.current.value;
+        // const folder_id = this.folderInput.current.value;
         const { note_title } = this.state;
 
         const options = {
@@ -80,7 +80,7 @@ class AddNote extends React.Component {
                 'content-type': 'application/json',
                 'Authorization': `Bearer ${config.API_KEY}`
             },
-            body: JSON.stringify({note_title, folder_id, content})
+            body: JSON.stringify({note_title, content})
         }
         fetch(`${config.API_ENDPOINT}/notes`, options)
             .then(resp => {
@@ -110,7 +110,7 @@ class AddNote extends React.Component {
                         <label htmlFor="content-input">content</label><br/>
                         <textarea type="text" placeholder="content" id="note-content-input" name="note-content-input" ref={this.contentInput} required></textarea>
                         {(!this.state.contentValid && this.state.contentValidationMessage) && <p className="error__message">{this.state.contentValidationMessage}</p>}<br/>
-                        <select ref={this.folderInput}>{this.populateOptions()}</select>
+                        {/* <select ref={this.folderInput}>{this.populateOptions()}</select> */}
                     </div>
                     <button type="submit" disabled={!this.state.nameValid && !this.state.contentValid}>Add Note</button>
                 </form>

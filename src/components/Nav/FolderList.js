@@ -75,23 +75,6 @@ class FolderList extends React.Component {
           }
         </React.Fragment>
 
-
-        // <li >
-        //   {folder.id !== this.state.updatingId ? <Folder folder={folder} /> : 
-        //     <FolderUpdateForm folder={folder} disableUpdateButton={(bool) => this.disableUpdateButton(bool)}/>
-        //   }
-        //   {folder.id !== this.state.updatingId ?
-        //     <>
-        //       <button className="delete" onClick={() => this.handleDeleteFolder(folder.id)}><i className="fa fa-trash"/></button> 
-        //       <button className="update" onClick={() => this.showUpdateFolderForm(folder.id)}><i className="fas fa-edit"/></button>
-        //     </>
-        //     :
-        //     <>
-        //       <button className="delete" onClick={() => this.showUpdateFolderForm(null)}><i className="fas fa-ban"/></button> 
-        //       <button className="update" disabled={this.state.updateButtonDisabled} onClick={() => this.handleUpdateFolder(folder.id)}><i className="fa fa-check"/></button>
-        //     </>
-        //     }
-        // </li>
       );
     });
   }
@@ -104,7 +87,7 @@ class FolderList extends React.Component {
           {this.getFolders(folders)}
         </ul>
         <Link to="/addfolder">
-          <button id="AddFolder">Add Folder</button>
+          <button id="AddFolder">Add Note</button>
         </Link>
 
       </>

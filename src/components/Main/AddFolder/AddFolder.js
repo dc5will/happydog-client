@@ -1,6 +1,7 @@
 import React from 'react';
 import AppContext from '../../../contexts/AppContext';
 import config from '../../../config';
+import { Textarea} from '../../Utils/Utils'
 import './AddFolder.css'
 
 class AddFolder extends React.Component {
@@ -10,6 +11,8 @@ class AddFolder extends React.Component {
             name: '',
             nameValid: false,
             nameValidationMessage: '',
+            contentValid: false,
+            contentValidationMessage: '',
         }
     }
     static contextType = AppContext;
@@ -39,6 +42,21 @@ class AddFolder extends React.Component {
             nameValidationMessage: errorMessage,
         });
     }
+
+    validateContent(content) {
+        let errorMessage = this.state.contentValidationMessage;
+        let error = this.state.contentValid;
+  
+        content = content.trim();
+        if (content.length === 0) {
+          errorMessage = 'Content must have at least 1 character';
+          error = true;
+        }
+        this.setState({
+          contentValid: !error,
+          contentValidationMessage: errorMessage
+        });
+      }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -70,14 +88,16 @@ class AddFolder extends React.Component {
     render() {
         return (
             <section>
-                <h2>Create Folder</h2>
+                <h2>Create Note</h2>
                 <form onSubmit={(event => this.handleSubmit(event))}>
                     <div>
-                        <label htmlFor="folder-name-input">Name</label><br/>
-                        <input type="text" placeholder="Folder name" id="folder-name-input" name="folder-name-input" onChange={event => this.updateName(event.target.value)}/>
-                        {(!this.state.nameValid && this.state.nameValidationMessage) && <p className="error__message">{this.state.nameValidationMessage}</p>}
+                        <label htmlFor="folder-name-input">Title</label><br/>
+                        <input type="text" placeholder="" id="folder-name-input" name="folder-name-input" onChange={event => this.updateName(event.target.value)}/>
+                        {(!this.state.nameValid && this.state.nameValidationMessage) && <p className="error__message">{this.state.nameValidationMessage}</p>}<br/>
+                        <label htmlFor="content-input">content</label><br/>
+                        <Textarea type="text" placeholder="content" id="note-content-input" name="note-content-input" ref={this.contentInput} required/>
                     </div>
-                    <button className='addFolderButton' type="submit" disabled={!this.state.nameValid}>Add Folder</button>
+                    <button className='addFolderButton' type="submit" disabled={!this.state.nameValid}>Add Note</button>
                 </form>
             </section>
         );

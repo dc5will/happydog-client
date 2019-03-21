@@ -7,7 +7,7 @@ function Folder(props) {
   return (
     <li>
       <Link to={`/folder/${folderId}`} className="folderContainer">{props.folder.folder_name}</Link>
-      <button className="updateButton" onClick={() => props.showUpdateFolderForm(folderId)}>edit</button>
+      {/* <button className="updateButton" onClick={() => props.showUpdateFolderForm(folderId)}>edit</button> */}
       <button className="deleteButton" onClick={() => props.handleDeleteFolder(folderId)}>x</button>
     </li>
     
