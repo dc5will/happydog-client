@@ -9,7 +9,7 @@ export default class Footer extends Component {
           {/* <p className="footer_author-text">Created by William Wong</p> */}
           <div className="footer_social-media" />
           <div className="copyright-text">
-            {/* <p>Copyright &copy; 2019</p> */}
+            <p>Copyright &copy; 2019</p>
           </div>
         </div>
       </footer>
