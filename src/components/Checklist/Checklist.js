@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CheckBox from '../CheckBox/CheckBox';
 import './Checklist.css'
+import WalkedChecklist from './WalkedChecklist';
 
 
 export default class Checklist extends Component {
@@ -11,15 +12,16 @@ export default class Checklist extends Component {
             {id: 1, value: "Breakfast", isChecked: false},
             {id: 2, value: "Lunch", isChecked: false},
             {id: 3, value: "Dinner", isChecked: false}
-          ]
+          ],
         }
       }
       
-      handleAllChecked = (event) => {
+      handleAllTasksChecked = (event) => {
         let tasks = this.state.tasks
         tasks.forEach(task => task.isChecked = event.target.checked) 
         this.setState({tasks: tasks})
       }
+
     
       handleCheckedElement = (event) => {
         let tasks = this.state.tasks
@@ -32,19 +34,22 @@ export default class Checklist extends Component {
     
       render() {
         return (
+          <React.Fragment>
           <div className="Checklist">
           <header>
             <h3>Have they eaten?</h3>
-        </header>
+          </header>
             <ul>
-            {
-              this.state.tasks.map((tasks, index) => {
-                return (<CheckBox key={index} handleCheckedElement={this.handleCheckedElement}  {...tasks} />)
-              })
-            }
+              {
+                this.state.tasks.map((tasks, index) => {
+                  return (<CheckBox key={index} handleCheckedElement={this.handleCheckedElement}  {...tasks} />)
+                })
+              }
             </ul>
-            <button className='resetButton' onClick={this.handleAllChecked}>Survived the day</button>
+            <button className='resetButton' onClick={this.handleAllTasksChecked}>Survived the day</button>
           </div>
+          <WalkedChecklist />
+          </React.Fragment>
         );
       }
     }
