@@ -1,71 +1,47 @@
 import React, { Component} from 'react';
 
 const NotesContext = React.createContext({
-    notes: [],
-    folders: [],
-})
+    notesList: [],
+    error: null,
+    setNotesList: () => {},
+    setError: () => {},
+    clearError: () => {},
+    deleteNoteFromList: () => {}
+});
 export default NotesContext
 
 
 export class NotesContextProvider extends Component {
     state = { 
-        folders: [],
-        notes: [],
-        handleDeleteNote: () => {},
-        handleDeleteFolder: () => {},
-        handleUpdateFolder: () => {},
-        addFolder: () => {},
-        addNote: () => {},
+        notesList: [],
+        error: null,
     }
 
-    handleDeleteNote = (noteId) => {
-        this.setState({
-            notes: this.state.notes.filter(note => note.id !== noteId)
-        });
+    setNotesList = notesList => {
+        this.setState({ notesList })
     }
 
-    handleDeleteFolder = (folderId) => {
-        this.setState({
-            folders: this.state.folders.filter(folder => folder.id !== folderId),
-            notes: this.state.notes.filter(note => note.folder_id !== folderId)
-        });
+    setError = error => {
+        console.error(error);
+        this.setState({ error })
     }
 
-    handleUpdateFolder = (updatedFolder) => {
-        console.log(updatedFolder, this.state.folders);
-        this.setState({
-            folders: this.state.folders.map(folder => {
-                return (folder.id !== updatedFolder.id) ? folder : updatedFolder;
-            })
-        });
-    }
-
-    addFolder = (folder) => {
-        const folders = [...this.state.folders, folder]
-        this.setState({
-            folders
-        })
-    }
-
-    addNote = (note) => {
-        const notes = [...this.state.notes, note]
-        this.setState({
-            notes
-        })
+    clearError = error => {
+        this.setState({ error: null })
     }
 
     render() {
-            const value = {
-                handleDeleteNote: this.state.handleDeleteNote,
-                handleDeleteFolder: this.state.handleDeleteFolder,
-                addFolder: this.state.addFolder,
-                addNote: this.state.addNote,
-                handleUpdateFolder: this.state.handleUpdateFolder
-            }
-            return (
-                <NotesContext.Provider value={value}>
-                    {this.props.children}
-                </NotesContext.Provider>
+        const value = {
+            notesList: this.state.notesList,
+            error: this.state.notesList,
+            setNotesList: this.setNotesList,
+            setError: this.setError,
+            clearError: this.clearError,
+        }
+        return (
+            <NotesContext.Provider value={value}>
+                {this.props.children}
+            </NotesContext.Provider>
             )
-          }
-      }
+        }
+    }
