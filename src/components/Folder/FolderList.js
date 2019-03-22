@@ -86,7 +86,7 @@ class FolderList extends React.Component {
         <ul>
           {this.getFolders(folders)}
         </ul>
-        <Link to="/addfolder">
+        <Link to="/addnotes">
           <button id="AddNote">Add Note</button>
         </Link>
 

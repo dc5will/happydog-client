@@ -1,107 +1,118 @@
-import React from 'react';
+import React, { Component } from "react";
+import { Route, Switch } from 'react-router-dom';
+import FolderList from '../Folder/FolderList';
 import AppContext from '../../contexts/AppContext';
 import config from '../../config';
-import { Textarea} from '../Utils/Utils'
-import './AddNotes.css'
 
-class AddNote extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: '',
-            nameValid: false,
-            nameValidationMessage: '',
-            contentValid: false,
-            contentValidationMessage: '',
-        }
+
+export default class NoteFolder extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      folders: [], 
+      notes: [], 
+      error: null,
     }
-    static contextType = AppContext;
+  }
 
-    updateName(name) {
-        this.setState({name}, () => {this.validateName(name)});
-    }
-
-    validateName(name) {
-        let errorMessage = this.state.nameValidationMessage;
-        let error = this.state.nameValid;
-
-        name = name.trim();
-        if (name.length === 0) {
-            errorMessage = 'Name must have at least 1 character';
-            error = true;
-        } else if (name.length > 20) {
-            errorMessage = 'Name cannot be longer than 20 characters';
-            error = true;
-        } else {
-            error = false;
-            errorMessage = '';
-        }
-
-        this.setState({
-            nameValid: !error,
-            nameValidationMessage: errorMessage,
-        });
-    }
-
-    validateContent(content) {
-        let errorMessage = this.state.contentValidationMessage;
-        let error = this.state.contentValid;
-  
-        content = content.trim();
-        if (content.length === 0) {
-          errorMessage = 'Content must have at least 1 character';
-          error = true;
-        }
-        this.setState({
-          contentValid: !error,
-          contentValidationMessage: errorMessage
-        });
+  componentDidMount() {
+    const options = {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
       }
-
-    handleSubmit(event) {
-        event.preventDefault();
-        const { name } = this.state;
-
-        const options = {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({folder_name: name})
-        }
-        fetch(`${config.API_ENDPOINT}/folders/`, options)
-            .then(resp => {
-                if (!resp.ok) {
-                    throw new Error('Something went wrong')
-                }
-                return resp.json();
-            })
-            .then(respJson => {
-                this.context.addFolder(respJson);
-                this.props.history.push(`/homepage`);
-            })
-            .catch(error => {
-                console.log(error.message);
-            })
     }
-    
-    render() {
-        return (
-            <section>
-                <h2>Create Note</h2>
-                <form onSubmit={(event => this.handleSubmit(event))}>
-                    <div>
-                        <label htmlFor="folder-name-input">Title</label><br/>
-                        <input type="text" placeholder="" id="folder-name-input" name="folder-name-input" onChange={event => this.updateName(event.target.value)}/>
-                        {(!this.state.nameValid && this.state.nameValidationMessage) && <p className="error__message">{this.state.nameValidationMessage}</p>}<br/>
-                        <label htmlFor="content-input">content</label><br/>
-                        <Textarea type="text" placeholder="content" id="note-content-input" name="note-content-input" ref={this.contentInput} required/>
-                    </div>
-                    <button className='addFolderButton' type="submit" disabled={!this.state.nameValid}>Add Note</button>
-                </form>
-            </section>
-        );
-    }
+    Promise.all([
+      fetch(`${config.API_ENDPOINT}/folders`, options),
+      fetch(`${config.API_ENDPOINT}/notes`, options)
+    ])
+    .then( ([foldersResp, notesResp]) => {
+      if (!foldersResp.ok) {
+        return foldersResp.json().then(event => Promise.reject(event));
+      }
+      if (!notesResp.ok) {
+        return notesResp.json().then(event => Promise.reject(event));
+      }
+      return Promise.all([
+        foldersResp.json(),
+        notesResp.json()
+      ])
+    })
+    .then(([foldersJson, notesJson]) => {
+      this.setState({folders: foldersJson, notes: notesJson, loading: false});
+    })
+    .catch(error => {
+      this.setState({error: error.message});
+    });
+  }
+
+  handleDeleteNote = (noteId) => {
+    this.setState({
+      notes: this.state.notes.filter(note => note.id !== noteId)
+    });
+  }
+
+  handleDeleteFolder = (folderId) => {
+    this.setState({
+      folders: this.state.folders.filter(folder => folder.id !== folderId),
+      notes: this.state.notes.filter(note => note.folder_id !== folderId)
+    });
+  }
+
+  handleUpdateFolder = (updatedFolder) => {
+    console.log(updatedFolder, this.state.folders);
+    this.setState({
+      folders: this.state.folders.map(folder => {
+        return (folder.id !== updatedFolder.id) ? folder : updatedFolder;
+      })
+    });
+  }
+
+  addFolder = (folder) => {
+    const folders = [...this.state.folders, folder]
+    this.setState({
+      folders
+    })
+  }
+
+  addNote = (note) => {
+    const notes = [...this.state.notes, note]
+    this.setState({
+      notes
+    })
+  }
+
+  renderNavigationComponent = () => {
+    return (
+      <>
+          <Route 
+            path="homepage/folder/:folderId"
+            component={FolderList}
+          />
+          <Route 
+            exact path="/homepage"
+            component={FolderList}
+          />
+      </>
+    );
+  }
+
+  render() {
+    return (
+      <AppContext.Provider value= {
+        {...this.state,
+            handleDeleteNote: this.handleDeleteNote, 
+            handleDeleteFolder: this.handleDeleteFolder,
+            addFolder: this.addFolder, 
+            addNote: this.addNote,
+            handleUpdateFolder: this.handleUpdateFolder
+        }}>
+          <section>
+            <h3>Important Notes</h3>
+            {this.renderNavigationComponent()}
+          </section>
+      </AppContext.Provider>
+    );
+  }
 }
 
-export default AddNote;

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-// import Header from '../Header/Header';
 import LandingPage from '../../routes/LandingPage/LandingPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import HomePage from '../../routes/HomePage/HomePage'
-// import AddNote from '../Main/AddNote/AddNote'
-import AddNote from '../../components/AddNotes/AddNotes';
+import AddNotesForm from '../../components/AddNotesForm/AddNotesForm';
 // import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 // import PrivateRoute from '../Utils/PrivateRoute';
 import './App.css';
@@ -35,13 +33,9 @@ class App extends Component {
               path={'/homepage'}
               component={HomePage}
             />
-            {/* <Route
-              path={'/addnote'}
-              component={AddNote}
-            /> */}
             <Route
-              path={'/addfolder'}
-              component={AddNote}
+              path={'/addnotes'}
+              component={AddNotesForm}
             />
           </Switch>
         </main>
