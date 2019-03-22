@@ -35,17 +35,15 @@ export default class LandingPage extends Component {
         <Header/>
         <header>
             <h2>Welcome back</h2>
-        </header>
+        </header> 
 
         <section>
             <Checklist />
         </section>
-
-        <section>
             {/* {this.renderNotes()} */}
             {/* <NoteList /> */}
             <NoteFolder />
-        </section>
+
         <Footer />
       </React.Fragment>
     );
