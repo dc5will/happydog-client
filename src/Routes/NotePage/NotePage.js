@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import NoteContext from '../../contexts/NoteContext'
 import NoteApiService from '../../services/note-api-service'
 import { Section } from '../../components/Utils/Utils'
 
@@ -16,7 +15,6 @@ export default class NotePage extends Component {
     match: { params: {} },
   }
 
-  static contextType = NoteContext
 
   componentDidMount() {
     const { noteId } = this.props.match.params

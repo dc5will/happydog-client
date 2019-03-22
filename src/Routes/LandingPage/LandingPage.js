@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Footer from '../../components/Footer/Footer'
 import "./LandingPage.css";
 import Header from '../../components/Header/Header'
 
@@ -42,7 +41,6 @@ export default class LandingPage extends Component {
             </p>
           </header>
         </section>
-        <Footer />
         </>
     );
   }

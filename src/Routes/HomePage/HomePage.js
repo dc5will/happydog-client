@@ -1,33 +1,18 @@
 import React, { Component } from "react";
-import Footer from '../../components/Footer/Footer'
 import Checklist from '../../components/Checklist/Checklist'
-// import NoteList from '../../components/Main/NoteList/NoteList';
 import NotesApiService from '../../services/notes-api-service';
-import NoteListContext from '../../contexts/NoteListContext';
-import NoteListItem from '../../components/NoteListItem/NoteListItem';
 import NoteFolder from '../../components/NoteFolder/NoteFolder';
 import Header from '../../components/Header/Header';
 import "./HomePage.css";
 
 export default class LandingPage extends Component {
-  static contextType = NoteListContext;
 
   componentDidMount() {
-    this.context.clearError()
     NotesApiService.getNotes()
       .then(this.context.setNoteList)
       .catch(this.context.setError)
   }
 
-  renderNotes() {
-    const { noteList = [] } = this.context
-    return noteList.map(note =>
-      <NoteListItem
-        key={note.id}
-        note={note}
-      />
-    )
-  }
 
   render() {
     return (
@@ -40,11 +25,8 @@ export default class LandingPage extends Component {
         <section>
             <Checklist />
         </section>
-            {/* {this.renderNotes()} */}
-            {/* <NoteList /> */}
             <NoteFolder />
 
-        <Footer />
       </React.Fragment>
     );
   }
