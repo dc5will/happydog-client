@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Footer from '../../components/Footer/Footer'
 import "./LandingPage.css";
+import Header from '../../components/Header/Header'
 
 export default class LandingPage extends Component {
   render() {
     return (
-      <React.Fragment>
+        <>
+        <Header />
         <section>
           <header>
             <h3>Is Your Dog Happy?</h3>
@@ -41,7 +43,7 @@ export default class LandingPage extends Component {
           </header>
         </section>
         <Footer />
-      </React.Fragment>
+        </>
     );
   }
 }

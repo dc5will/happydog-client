@@ -6,6 +6,7 @@ import NotesApiService from '../../services/notes-api-service';
 import NoteListContext from '../../contexts/NoteListContext';
 import NoteListItem from '../../components/NoteListItem/NoteListItem';
 import NoteFolder from '../../components/NoteFolder/NoteFolder';
+import Header from '../../components/Header/Header';
 import "./HomePage.css";
 
 export default class LandingPage extends Component {
@@ -31,6 +32,7 @@ export default class LandingPage extends Component {
   render() {
     return (
       <React.Fragment>
+        <Header/>
         <header>
             <h2>Welcome back</h2>
         </header>

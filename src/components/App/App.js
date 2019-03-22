@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Header from '../Header/Header';
+// import Header from '../Header/Header';
 import LandingPage from '../../routes/LandingPage/LandingPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
@@ -16,9 +16,6 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header className='App_header'>
-          <Header />
-        </header>
         <main className='App_main'>
           <Switch>
             <Route 
