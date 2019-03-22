@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CheckBox from '../CheckBox/CheckBox';
+import CheckBox from './CheckBox';
 import './Checklist.css'
 import WalkedChecklist from './WalkedChecklist';
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import LandingPage from '../../routes/LandingPage/LandingPage'
-import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
-import LoginPage from '../../routes/LoginPage/LoginPage'
-import HomePage from '../../routes/HomePage/HomePage'
+import LandingPage from '../../components/LandingPage/LandingPage'
+import Registration from '../../components/Registration/Registration';
+import LoginPage from '../../components/LoginPage/LoginPage'
+import HomePage from '../../components/HomePage/HomePage'
 import AddNotesForm from '../../components/AddNotesForm/AddNotesForm';
 // import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 // import PrivateRoute from '../Utils/PrivateRoute';
@@ -23,7 +23,7 @@ class App extends Component {
             />
             <Route
               path={'/register'}
-              component={RegistrationPage}
+              component={Registration}
             />
             <Route
               path={'/login'}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CheckBox from '../CheckBox/CheckBox';
+import CheckBox from './CheckBox';
 
 export default class WalkedChecklist extends Component {
     constructor(props) {
