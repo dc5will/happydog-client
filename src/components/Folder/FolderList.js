@@ -1,9 +1,9 @@
 import React from 'react';
-import Folder from '../Folder/Folder';
+import Folder from './Folder';
 import AppContext from '../../contexts/AppContext';
 import { Link } from 'react-router-dom';
 import config from '../../config';
-import FolderUpdateForm from '../../components/Folder/FolderUpdateForm';
+import FolderUpdateForm from './FolderUpdateForm';
 
 class FolderList extends React.Component {
   static contextType = AppContext;
@@ -87,7 +87,7 @@ class FolderList extends React.Component {
           {this.getFolders(folders)}
         </ul>
         <Link to="/addfolder">
-          <button id="AddFolder">Add Note</button>
+          <button id="AddNote">Add Note</button>
         </Link>
 
       </>

@@ -2,9 +2,9 @@ import React from 'react';
 import AppContext from '../../contexts/AppContext';
 import config from '../../config';
 import { Textarea} from '../Utils/Utils'
-import './AddFolder.css'
+import './AddNotes.css'
 
-class AddFolder extends React.Component {
+class AddNote extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -104,4 +104,4 @@ class AddFolder extends React.Component {
     }
 }
 
-export default AddFolder;
+export default AddNote;
