@@ -9,7 +9,7 @@ export default class LandingPage extends Component {
 
   componentDidMount() {
     NotesApiService.getNotes()
-      .then(this.context.setNoteList)
+      // .then(this.context.setNoteList)
       .catch(this.context.setError)
   }
 

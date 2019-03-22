@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
-import NoteList from '../Main/NoteList/NoteList';
-import NoteId from '../Main/NoteId/NoteId';
 import FolderList from '../Nav/FolderList';
 import NoteNav from '../Nav/NoteNav';
 import AppContext from '../../contexts/AppContext';
-import AddFolder from '../Main/AddFolder/AddFolder';
-import AddNote from '../Main/AddNote/AddNote';
+// import AddFolder from '../Main/AddFolder/AddFolder';
+// import AddNote from '../Main/AddNote/AddNote';
 import config from '../../config';
 
 
@@ -87,40 +85,6 @@ export default class NoteFolder extends Component {
     })
   }
 
-  getMainRoutes = () => {
-    return (<Switch>
-      <Route
-        exact path="/homepage"
-        component={NoteList}
-      />
-      <Route
-        path="homepage/folder/:folderId"
-        component={NoteList}
-      />
-      <Route
-        path="homepage/note/:noteId"
-        component={NoteId}
-      />
-      <Route
-        path="homepage/AddNote"
-        component={AddNote}
-      />
-      <Route
-        path="homepage/AddFolder"
-        component={AddFolder}
-      />
-      <Route render={() => <div>Something went wrong!</div>} />
-    </Switch>);
-  }
-
-  renderMainComponent = () => {
-    return (
-      <>
-        {this.getMainRoutes()}
-      </>
-    );
-  }
-
   renderNavigationComponent = () => {
     return (
       <>
@@ -165,9 +129,6 @@ export default class NoteFolder extends Component {
             <h3>Important Notes</h3>
             {this.renderNavigationComponent()}
           </section>
-          {/* <section>
-            {this.renderMainComponent()}
-          </section> */}
       </AppContext.Provider>
     );
   }
