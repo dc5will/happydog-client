@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Checklist from '../../components/Checklist/Checklist'
-import AddNotes from '../../components/AddNotes/AddNotes';
+// import AddNotes from '../../components/AddNotes/AddNotes';
 import Header from '../../components/Header/Header';
 import "./HomePage.css";
 
@@ -24,7 +24,7 @@ export default class LandingPage extends Component {
         <section>
             <Checklist />
         </section>
-            <AddNotes />
+            {/* <AddNotes /> */}
 
       </React.Fragment>
     );
