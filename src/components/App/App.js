@@ -6,7 +6,7 @@ import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import HomePage from '../../routes/HomePage/HomePage'
 // import AddNote from '../Main/AddNote/AddNote'
-import AddFolder from '../Main/AddFolder/AddFolder'
+import AddFolder from '../../components/AddFolder/AddFolder';
 // import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 // import PrivateRoute from '../Utils/PrivateRoute';
 import './App.css';

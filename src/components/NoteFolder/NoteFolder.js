@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 import FolderList from '../Nav/FolderList';
-import NoteNav from '../Nav/NoteNav';
 import AppContext from '../../contexts/AppContext';
-// import AddFolder from '../Main/AddFolder/AddFolder';
-// import AddNote from '../Main/AddNote/AddNote';
 import config from '../../config';
 
 
@@ -88,11 +85,6 @@ export default class NoteFolder extends Component {
   renderNavigationComponent = () => {
     return (
       <>
-        {<Switch>
-          <Route 
-            path="homepage/note/:noteId"
-            component={NoteNav}
-          />
           <Route 
             path="homepage/folder/:folderId"
             component={FolderList}
@@ -101,16 +93,6 @@ export default class NoteFolder extends Component {
             exact path="/homepage"
             component={FolderList}
           />
-          <Route
-            path="homepage/AddFolder"
-            component={NoteNav}
-          />
-          <Route
-            path="homepage/AddNote"
-            component={NoteNav}
-          />
-          <Route component={NoteNav}/>
-        </Switch>}
       </>
     );
   }

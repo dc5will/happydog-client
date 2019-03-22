@@ -1,7 +1,7 @@
 import React from 'react';
-import AppContext from '../../../contexts/AppContext';
-import config from '../../../config';
-import { Textarea} from '../../Utils/Utils'
+import AppContext from '../../contexts/AppContext';
+import config from '../../config';
+import { Textarea} from '../Utils/Utils'
 import './AddFolder.css'
 
 class AddFolder extends React.Component {
