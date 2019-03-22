@@ -1,13 +1,13 @@
 import React, { Component} from 'react';
 
-const AppContext = React.createContext({
+const NotesContext = React.createContext({
     notes: [],
     folders: [],
 })
-export default AppContext
+export default NotesContext
 
 
-export class AppContextProvider extends Component {
+export class NotesContextProvider extends Component {
     state = { 
         folders: [],
         notes: [],
@@ -63,9 +63,9 @@ export class AppContextProvider extends Component {
                 handleUpdateFolder: this.state.handleUpdateFolder
             }
             return (
-                <AppContext.Provider value={value}>
+                <NotesContext.Provider value={value}>
                     {this.props.children}
-                </AppContext.Provider>
+                </NotesContext.Provider>
             )
           }
       }

@@ -1,12 +1,12 @@
 import React from 'react';
 import Folder from './Folder';
-import AppContext from '../../contexts/AppContext';
+import NotesContext from '../../contexts/NotesContext';
 import { Link } from 'react-router-dom';
 import config from '../../config';
 import FolderUpdateForm from './FolderUpdateForm';
 
 class FolderList extends React.Component {
-  static contextType = AppContext;
+  static contextType = NotesContext;
 
   state = {
     updatingId: null,

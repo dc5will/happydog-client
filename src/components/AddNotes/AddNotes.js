@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 import FolderList from '../Folder/FolderList';
-import AppContext from '../../contexts/AppContext';
+import NotesContext from '../../contexts/NotesContext';
 import config from '../../config';
 
 
@@ -99,7 +99,7 @@ export default class NoteFolder extends Component {
 
   render() {
     return (
-      <AppContext.Provider value= {
+      <NotesContext.Provider value= {
         {...this.state,
             handleDeleteNote: this.handleDeleteNote, 
             handleDeleteFolder: this.handleDeleteFolder,
@@ -111,7 +111,7 @@ export default class NoteFolder extends Component {
             <h3>Important Notes</h3>
             {this.renderNavigationComponent()}
           </section>
-      </AppContext.Provider>
+      </NotesContext.Provider>
     );
   }
 }

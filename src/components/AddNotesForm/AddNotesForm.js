@@ -1,5 +1,5 @@
 import React from 'react';
-import AppContext from '../../contexts/AppContext';
+import NotesContext from '../../contexts/NotesContext';
 import config from '../../config';
 import { Textarea} from '../Utils/Utils'
 import './AddNotesForm.css'
@@ -15,7 +15,7 @@ class AddNote extends React.Component {
             contentValidationMessage: '',
         }
     }
-    static contextType = AppContext;
+    static contextType = NotesContext;
 
     updateName(name) {
         this.setState({name}, () => {this.validateName(name)});
