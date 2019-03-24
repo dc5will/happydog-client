@@ -1,46 +1,74 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from '../../components/LandingPage/LandingPage'
-import Registration from '../../components/Registration/Registration';
-import LoginPage from '../../components/LoginPage/LoginPage'
-import HomePage from '../../components/HomePage/HomePage'
-import AddNotesForm from '../../components/AddNotesForm/AddNotesForm';
+import SignUp from '../../components/SignUp/SignUp';
+import Login from '../../components/Login/Login';
+// import HomePage from '../../components/HomePage/HomePage'
+// import AddNotesForm from '../../components/AddNotesForm/AddNotesForm';
 // import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 // import PrivateRoute from '../Utils/PrivateRoute';
 import './App.css';
+import NotesApiService from '../../services/notes-api-service';
+import NotesContext from '../../contexts/NotesContext';
+import AddNote from '../AddNote/AddNote';
+// import Header from '../Header/Header';
+import ViewNotes from '../../components/ViewNotes/ViewNotes';
 
 class App extends Component {
+  state = {
+    notes: [],
+
+    getNotes: () => {
+      NotesApiService.getAllNotes()
+        .then(notes => {
+          this.setState({
+            notes
+          })
+        })
+    },
+
+    addNote: (note) => {
+      this.setState({
+        notes: [...this.state.notes, note]
+      })
+    },
+
+  }
+
+  componentDidMount () {
+    this.state.getNotes()
+  }
 
   render() {
     return (
-      <div className='App'>
-        <main className='App_main'>
+      <div className="App">
+        <NotesContext.Provider value={this.state}>
+          <Route exact path = '/' component = {LandingPage} />
           <Switch>
-            <Route 
-              exact
-              path={'/'}
-              component={LandingPage}
+            <Route
+              path={'/login'}
+              component={Login}
             />
             <Route
               path={'/register'}
-              component={Registration}
+              component={SignUp}
             />
             <Route
-              path={'/login'}
-              component={LoginPage}
+              exact path={'/my-notes'} 
+              component={ViewNotes}
             />
-            <Route
-              path={'/homepage'}
-              component={HomePage}
-            />
-            <Route
-              path={'/addnotes'}
-              component={AddNotesForm}
+            {/* <Route 
+              path={'/my-notes/:noteId'}
+              component={NoteDetail}
+            /> */}
+            <Route 
+              path={'/add-note'} 
+              component = {AddNote}
             />
           </Switch>
-        </main>
+        </NotesContext.Provider>
       </div>
-    )
+    );
   }
 }
 

@@ -1,9 +1,8 @@
 import React, { Component} from 'react';
 
 const NotesContext = React.createContext({
-    notesList: [],
+    notes: [],
     error: null,
-    setNotesList: () => {},
     setError: () => {},
     clearError: () => {},
     deleteNoteFromList: () => {}
@@ -13,12 +12,8 @@ export default NotesContext
 
 export class NotesContextProvider extends Component {
     state = { 
-        notesList: [],
+        notes: [],
         error: null,
-    }
-
-    setNotesList = notesList => {
-        this.setState({ notesList })
     }
 
     setError = error => {
@@ -32,8 +27,8 @@ export class NotesContextProvider extends Component {
 
     render() {
         const value = {
-            notesList: this.state.notesList,
-            error: this.state.notesList,
+            notes: this.state.notes,
+            error: this.state.notes,
             setNotesList: this.setNotesList,
             setError: this.setError,
             clearError: this.clearError,
