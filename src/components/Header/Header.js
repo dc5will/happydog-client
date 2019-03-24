@@ -41,7 +41,7 @@ export default class Header extends Component {
       <React.Fragment>
         <nav className="Header">
           <h1>
-            <Link to="/homepage">Happy dog</Link>
+            <Link to="/my-notes">Happy dog</Link>
           </h1>
           {TokenService.hasAuthToken()
           ? this.renderLogoutLink()

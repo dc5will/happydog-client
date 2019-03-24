@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NotesContext from '../../contexts/NotesContext';
 import NotesApiService from '../../services/notes-api-service';
+import Header from '../../components/Header/Header';
 
 
 
@@ -16,6 +17,8 @@ export default class AddNote extends Component {
 
   render() {
     return (
+      <>
+      <Header />
       <form onSubmit={(e) => this.handleSubmit(e)}>
         <label>Title:
           <br />
@@ -24,6 +27,7 @@ export default class AddNote extends Component {
         <br />
       <button type='submit'>Submit</button>
     </form>
+    </>
     )
   }
 }

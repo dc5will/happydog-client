@@ -28,6 +28,9 @@ export default class ViewNotes extends Component {
                 <Checklist />
             </section>
             <section>
+            <header>
+                <h3>Important Notes</h3>
+            </header>
             <ul>
                 {this.createList(this.context.notes)}
             </ul>

@@ -13,6 +13,7 @@ import NotesContext from '../../contexts/NotesContext';
 import AddNote from '../AddNote/AddNote';
 // import Header from '../Header/Header';
 import ViewNotes from '../../components/ViewNotes/ViewNotes';
+import NoteDetail from '../../components/NoteDetail/NoteDetail';
 
 class App extends Component {
   state = {
@@ -31,6 +32,21 @@ class App extends Component {
       this.setState({
         notes: [...this.state.notes, note]
       })
+    },
+
+    deleteNote: (id) => {
+      const targetNote = this.state.notes.filter((note) => note.id === id);
+      const newNotes = this.state.notes;
+      newNotes.splice(this.state.notes.indexOf(targetNote[0]), 1);
+      this.setState({notes: newNotes})
+    },
+
+    clearNotes: () => {
+      this.setState({notes: []})
+    },
+
+    deleteUser: () => {
+      this.setState({deletedUser: true})
     },
 
   }
@@ -57,10 +73,10 @@ class App extends Component {
               exact path={'/my-notes'} 
               component={ViewNotes}
             />
-            {/* <Route 
+            <Route 
               path={'/my-notes/:noteId'}
               component={NoteDetail}
-            /> */}
+            />
             <Route 
               path={'/add-note'} 
               component = {AddNote}
