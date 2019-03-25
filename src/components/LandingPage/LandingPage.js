@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./LandingPage.css";
-import Header from '../../components/Header/Header'
+import Header from "../../components/Header/Header";
 
 export default class LandingPage extends Component {
   render() {
     return (
-        <>
+      <>
         <Header />
         <section>
           <header>
@@ -41,7 +41,7 @@ export default class LandingPage extends Component {
             </p>
           </header>
         </section>
-        </>
+      </>
     );
   }
 }
