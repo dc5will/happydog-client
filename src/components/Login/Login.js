@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Link } from 'react-router-dom'
 import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import NotesContext from "../../contexts/NotesContext";
@@ -44,7 +43,7 @@ class Login extends Component {
       <>
         <Header />
         <Section className="LoginPage">
-          <h2>Welcome back!</h2>
+          <h2> back!</h2>
           <h3>Please log in below:</h3>
           <form className="loginForm" onSubmit={this.handleSubmitJwtAuth}>
             <div role="alert">{error && <p className="red">{error}</p>}</div>

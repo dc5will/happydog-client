@@ -23,7 +23,7 @@ export default class ViewNotes extends Component {
       <React.Fragment>
         <Header />
         <header>
-          <h2>Welcome back</h2>
+          <h2>Welcome back </h2>
         </header>
         <Section>
           <Checklist />

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CheckBox from "./CheckBox";
-import { Section, Button } from "../../components/Utils/Utils";
+import { Button } from "../../components/Utils/Utils";
 
 export default class WalkedChecklist extends Component {
   constructor(props) {

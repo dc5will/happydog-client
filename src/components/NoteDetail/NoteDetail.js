@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import NotesContext from "../../contexts/NotesContext";
 import NotesApiService from "../../services/notes-api-service";
 import Header from "../../components/Header/Header";
-import { Section, Input, Button } from "../../components/Utils/Utils";
-import './NoteDetail.css'
+import { Section, Input } from "../../components/Utils/Utils";
+import Footer from '../../components/Footer/Footer';
+import "./NoteDetail.css";
 
 class NoteDetail extends Component {
   static contextType = NotesContext;
@@ -60,34 +61,40 @@ class NoteDetail extends Component {
       const date = new Date(comment.date_created)
       return (
         <li key={key}>
-          <span className='commentDate'>Date: {(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span>
-          <span className="commentContent">{comment.content}</span>
-          <button className='commentDelete' id={comment.id} onClick={e => this.deleteComment(e)}>
+          <span className='commentDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span>
+          <span id="commentContent">{comment.content}</span>
+          <button
+            className="commentDelete"
+            id={comment.id}
+            onClick={e => this.deleteComment(e)}
+          >
             x
           </button>
         </li>
-      );
-    });
+      )
+    })
 
     return (
       <React.Fragment>
         <Header />
         <Section>
-          <h1>Your notes</h1>
+          <h1>Your Note</h1>
         </Section>
         <Section>
-          <h3>Comments</h3>
+          <h3>Details</h3>
           <ul>{comments}</ul>
-          <form className="commentsForm" onSubmit={e => this.submitComment(e)}>
+          <form id="commentsForm" onSubmit={e => this.submitComment(e)}>
             <Input id="comments" name="comments" />
-            <Button type="submit">Add</Button>
-            <button className='deleteNote'
+            <button className='addButton' type="submit">Add Detail</button>
+            <button
+              className="deleteNote"
               onClick={() => this.deleteNote(this.props.match.params.noteId)}
             >
               Delete note
             </button>
           </form>
         </Section>
+        <Footer />
       </React.Fragment>
     );
   }

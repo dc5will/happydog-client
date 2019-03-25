@@ -41,9 +41,6 @@ class App extends Component {
       this.setState({ notes: [] });
     },
 
-    deleteUser: () => {
-      this.setState({ deletedUser: true });
-    }
   };
 
   componentDidMount() {

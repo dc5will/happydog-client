@@ -81,23 +81,18 @@ const NotesApiService = {
     );
   },
 
-  markNoteComplete(note) {
-    return fetch(`${config.API_ENDPOINT}/my-notes`, {
-      method: "PATCH",
+  // grab specific user for welcome
+  getUserName(user) {
+    return fetch(`${config.API_ENDPOINT}/comments/${user}`, {
+      method: "GET",
       headers: {
-        authorization: `bearer ${TokenService.getAuthToken()}`,
-        "content-type": "application/json"
-      },
-      body: JSON.stringify({
-        name: note.name,
-        comments: note.comments,
-        complete: note.complete,
-        id: note.id
-      })
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      }
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
-  }
+  },
+
 };
 
 export default NotesApiService;
