@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Checklist from "../../components/Checklist/Checklist";
 import { Button, Section } from '../../components/Utils/Utils';
+import Footer from '../../components/Footer/Footer';
 
 export default class ViewNotes extends Component {
   state = {
@@ -36,6 +37,7 @@ export default class ViewNotes extends Component {
             <Button>Add Note</Button>
           </Link>
         </Section>
+        <Footer />
       </React.Fragment>
     );
   }

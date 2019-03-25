@@ -5,6 +5,8 @@ import TokenService from "../../services/token-service";
 import NotesContext from "../../contexts/NotesContext";
 import Header from "../../components/Header/Header";
 import { Input, Button, Section } from "../../components/Utils/Utils";
+import Footer from '../../components/Footer/Footer'
+import './Login.css'
 
 class Login extends Component {
   static defaultProps = {
@@ -44,7 +46,7 @@ class Login extends Component {
         <Section className="LoginPage">
           <h2>Welcome back!</h2>
           <h3>Please log in below:</h3>
-          <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
+          <form className="loginForm" onSubmit={this.handleSubmitJwtAuth}>
             <div role="alert">{error && <p className="red">{error}</p>}</div>
             <div className="user_name">
               <label htmlFor="LoginForm__user_name">User name</label>
@@ -62,6 +64,7 @@ class Login extends Component {
             <Button type="submit">Login</Button>
           </form>
         </Section>
+        <Footer />
       </>
     );
   }
