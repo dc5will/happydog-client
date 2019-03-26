@@ -10,7 +10,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default class ViewNotes extends Component {
   state = {
-    notes: [],
+    notes: []
   };
 
   static contextType = NotesContext;
@@ -37,10 +37,10 @@ export default class ViewNotes extends Component {
           <header>
             <h3>Important Notes</h3>
           </header>
-          <ul>{this.createList(this.context.notes)}</ul>
           <Link to="/add-note">
             <Button>Add Note</Button>
           </Link>
+          <ul>{this.createList(this.context.notes)}</ul>
         </Section>
 
         <Footer />

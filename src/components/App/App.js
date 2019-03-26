@@ -44,10 +44,11 @@ class App extends Component {
     clearNotes: () => {
       this.setState({ notes: [] });
     },
-
   };
 
-  // TODO: https://github.com/auth0/jwt-decode/issues/65 error
+  // NOTE: https://github.com/auth0/jwt-decode/issues/65 error
+  // replicate error: make changes to landing page and reload
+  // fix error: comment out code below and uncomment and reload when on homepage
   componentDidMount() {
     this.state.getNotes();
     const user = TokenService.getUserFromToken()

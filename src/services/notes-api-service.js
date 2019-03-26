@@ -82,17 +82,17 @@ const NotesApiService = {
   },
 
   // grab specific user for welcome
-  getUserName() {
-    return fetch(`${config.API_ENDPOINT}/users`, {
-      method: "GET",
-      headers: {
-        authorization: `bearer ${TokenService.getAuthToken()}`,
-        "content-type": "application/json"
-      }
-    }).then(res =>
-      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
-    );
-  },
+  // getUserName() {
+  //   return fetch(`${config.API_ENDPOINT}/users`, {
+  //     method: "GET",
+  //     headers: {
+  //       authorization: `bearer ${TokenService.getAuthToken()}`,
+  //       "content-type": "application/json"
+  //     }
+  //   }).then(res =>
+  //     !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+  //   );
+  // },
   
 
 };
