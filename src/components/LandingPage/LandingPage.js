@@ -13,7 +13,7 @@ export default class LandingPage extends Component {
             <h3>Is Your Dog Happy?</h3>
           </header>
           <p>
-            Take the of making sure your dogs are happy by keeping
+            Take the guesswork out of making sure your dogs are happy by keeping
             track of all of your dogs needs and keep a record and journal for
             your beloved canine friend.
           </p>
@@ -33,9 +33,9 @@ export default class LandingPage extends Component {
 
         <section>
           <header>
-            <h3>Secured Notes</h3>
+            <h3>Secured Notes and Tasks</h3>
             <p>
-              Keep important notes or memos for future vet visits or dog
+              Keep secured important notes or tasks for future vet visits or dog
               sitters. Consolidate all of your dog's important information such
               as vaccination records, allergies, special care instructions, and
               memories.

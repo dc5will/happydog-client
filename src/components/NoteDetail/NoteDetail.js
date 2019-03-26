@@ -85,13 +85,10 @@ class NoteDetail extends Component {
           <ul>{comments}</ul>
           <form id="commentsForm" onSubmit={e => this.submitComment(e)}>
             <Input id="comments" name="comments" />
-            <Link to='/my-notes'>
-              <button className='backButton' type='click'>Back</button>
-            </Link>
             <button className='addButton' type="submit">Add Detail</button>
             <button
               className="deleteNote"
-              onClick={() => this.deleteNote(this.props.match.params.noteId)}
+              onClick={() => this.deleteNote(Number(this.props.match.params.noteId))}
             >
               Delete note
             </button>

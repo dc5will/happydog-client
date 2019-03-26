@@ -47,7 +47,7 @@ class App extends Component {
   };
 
   // NOTE: https://github.com/auth0/jwt-decode/issues/65 error
-  // replicate error: make changes to landing page and reload
+  // replicate error: make changes to pages that are not private route
   // fix error: comment out code below and uncomment and reload when on homepage
   componentDidMount() {
     this.state.getNotes();

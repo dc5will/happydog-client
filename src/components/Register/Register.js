@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AuthApiService from '../../services/auth-api-service'
 import { Section, Button, Required, Input } from '../Utils/Utils';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 class Register extends Component {
   static defaultProps = {
@@ -10,9 +11,9 @@ class Register extends Component {
 
   state = { error: null }
 
-  handleSubmit = ev => {
-    ev.preventDefault()
-    const { full_name, user_name, password } = ev.target
+  handleSubmit = e => {
+    e.preventDefault()
+    const { full_name, user_name, password } = e.target
     this.setState({ error: null })
     AuthApiService.postUser({
       user_name: user_name.value,
@@ -78,6 +79,7 @@ class Register extends Component {
         </Button>
       </form>
       </Section>
+      <Footer />
       </>
     )
   }
