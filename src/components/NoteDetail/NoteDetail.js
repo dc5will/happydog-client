@@ -2,26 +2,31 @@ import React, { Component } from "react";
 import NotesContext from "../../contexts/NotesContext";
 import NotesApiService from "../../services/notes-api-service";
 import Header from "../../components/Header/Header";
-import { Section, Input } from "../../components/Utils/Utils";
-import Footer from '../../components/Footer/Footer';
-import { Link } from 'react-router-dom';
+import { Section } from "../../components/Utils/Utils";
+import Footer from "../../components/Footer/Footer";
+// import { Link } from "react-router-dom";
 import "./NoteDetail.css";
+// import Calendar from 'react-calendar';
 
 class NoteDetail extends Component {
   static contextType = NotesContext;
 
   state = {
-    comments: []
+    comments: [],
+    dueDate: '',
   };
+
 
   submitComment = e => {
     e.preventDefault();
-    const { comments } = e.target;
+    const { comments, dueDate } = e.target;
     const noteId = this.props.match.params.noteId;
-    NotesApiService.postNewComment(noteId, comments.value)
+    console.log(dueDate.value);
+    NotesApiService.postNewComment(noteId, comments.value, dueDate.value)
       .then(comment =>
         this.setState({
-          comments: [...this.state.comments, comment]
+          comments: [...this.state.comments, comment],
+          dueDate: dueDate.value
         })
       )
       .then(document.getElementById("commentsForm").reset());
@@ -51,17 +56,30 @@ class NoteDetail extends Component {
     NotesApiService.getComments(Number(this.props.match.params.noteId)).then(
       comments =>
         this.setState({
-          comments
+          comments,
+        })
+    );
+    NotesApiService.getComments(Number(this.props.match.params.noteId)).then(
+      dueDate =>
+        this.setState({
+          dueDate: String(dueDate.value),
         })
     );
   }
 
+  // trying out react-calendar
+  // onChange = dueDate => this.setState({ dueDate })
+
   render() {
     const comments = this.state.comments.map((comment, key) => {
-      // const date = new Date(comment.date_created)
+      console.log(comment.dueDate)
+      // const date = new Date(comment.dueDate)
+      console.log(this.state.dueDate);
+      const dueDate = this.state.dueDate;
       return (
-        <li className='taskList' key={key}>
-          {/* <span className='commentDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span> */}
+        <li className="taskList" key={key}>
+          <span id="dueDate">{dueDate}</span>
+          {/* <span className='dueDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span>           */}
           <span id="commentContent">{comment.content}</span>
           <button
             className="commentDelete"
@@ -71,9 +89,8 @@ class NoteDetail extends Component {
             x
           </button>
         </li>
-      )
-    })
-
+      );
+    });
 
     return (
       <React.Fragment>
@@ -84,11 +101,27 @@ class NoteDetail extends Component {
         <Section>
           <ul>{comments}</ul>
           <form id="commentsForm" onSubmit={e => this.submitComment(e)}>
-            <Input id="comments" name="comments" />
-            <button className='addButton' type="submit">Add Detail</button>
+            Enter Task:
+            <input className="commentsInput" name="comments" />
+            <br />
+            Enter Due Date:
+            {/* <Calendar onChange={this.onChange} value={this.state.dueDate} */}
+            <input className='dueDate' name='dueDate'
+              type="date"
+              id="dueDate"
+              value={this.state.dueDate}
+              onChange={event =>
+                this.setState({ dueDate: event.target.value })
+              }
+            /> < br />
+            <button className="addButton" type="submit">
+              Add Task
+            </button>
             <button
               className="deleteNote"
-              onClick={() => this.deleteNote(Number(this.props.match.params.noteId))}
+              onClick={() =>
+                this.deleteNote(Number(this.props.match.params.noteId))
+              }
             >
               Delete note
             </button>

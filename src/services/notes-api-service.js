@@ -41,7 +41,7 @@ const NotesApiService = {
     }).then(res => (!res.ok ? res.json().then(e => Promise.reject(e)) : null));
   },
 
-  postNewComment(noteId, comment) {
+  postNewComment(noteId, comment, dueDate) {
     return fetch(`${config.API_ENDPOINT}/comments`, {
       method: "POST",
       headers: {
@@ -50,7 +50,8 @@ const NotesApiService = {
       },
       body: JSON.stringify({
         noteId,
-        comment
+        comment,
+        dueDate
       })
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
