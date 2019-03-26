@@ -13,7 +13,7 @@
     border: 1px solid grey;
     background-color: crimson;
     font-size: 1.1em;
-    border-radius: 4px;
+    border-radius: 20px;
     padding: 8px 12px;
     font-weight: bold;
     margin-left: 10px;
@@ -21,6 +21,10 @@
 
 #commentsForm {
     padding-bottom: 20px;
+}
+
+.taskList {
+    margin-bottom: 10px;
 }
 
 .commentDate {
@@ -31,7 +35,17 @@
     border: 1px solid grey;
     background-color: green;
     font-size: 1.1em;
-    border-radius: 4px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.backButton {
+    border: 1px solid grey;
+    background-color: gray;
+    font-size: 1.1em;
+    border-radius: 20px;
     padding: 8px 12px;
     font-weight: bold;
     margin-left: 10px;

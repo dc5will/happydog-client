@@ -4,6 +4,7 @@ import NotesApiService from "../../services/notes-api-service";
 import Header from "../../components/Header/Header";
 import { Section, Input } from "../../components/Utils/Utils";
 import Footer from '../../components/Footer/Footer';
+import { Link } from 'react-router-dom';
 import "./NoteDetail.css";
 
 class NoteDetail extends Component {
@@ -57,10 +58,10 @@ class NoteDetail extends Component {
 
   render() {
     const comments = this.state.comments.map((comment, key) => {
-      const date = new Date(comment.date_created)
+      // const date = new Date(comment.date_created)
       return (
-        <li key={key}>
-          <span className='commentDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span>
+        <li className='taskList' key={key}>
+          {/* <span className='commentDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span> */}
           <span id="commentContent">{comment.content}</span>
           <button
             className="commentDelete"
@@ -78,13 +79,15 @@ class NoteDetail extends Component {
       <React.Fragment>
         <Header />
         <Section>
-          <h1>Your Note</h1>
+          <h1>Tasks</h1>
         </Section>
         <Section>
-          <h3>Details</h3>
           <ul>{comments}</ul>
           <form id="commentsForm" onSubmit={e => this.submitComment(e)}>
             <Input id="comments" name="comments" />
+            <Link to='/my-notes'>
+              <button className='backButton' type='click'>Back</button>
+            </Link>
             <button className='addButton' type="submit">Add Detail</button>
             <button
               className="deleteNote"

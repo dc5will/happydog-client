@@ -17,8 +17,17 @@ const ChecklistApiService = {
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
-
-  
+  getAllChecked() {
+    return fetch(`${config.API_ENDPOINT}/checklist`, {
+      method: "GET",
+      headers: {
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      },
+      body: JSON.stringify(TokenService.getAuthToken)
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+  }
 };
 
 export default ChecklistApiService;
