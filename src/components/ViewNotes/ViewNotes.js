@@ -4,12 +4,14 @@ import Note from "../Note/Note";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Checklist from "../../components/Checklist/Checklist";
-import { Button, Section } from '../../components/Utils/Utils';
-import Footer from '../../components/Footer/Footer';
+import { Button, Section } from "../../components/Utils/Utils";
+import Footer from "../../components/Footer/Footer";
+import NotesApiService from "../../services/notes-api-service";
 
 export default class ViewNotes extends Component {
   state = {
-    notes: []
+    notes: [],
+    userName: ''
   };
 
   static contextType = NotesContext;
@@ -22,12 +24,15 @@ export default class ViewNotes extends Component {
     return (
       <React.Fragment>
         <Header />
+
         <header>
-          <h2>Welcome back </h2>
+          <h2>Welcome back {this.getUserName}</h2>
         </header>
+
         <Section>
           <Checklist />
         </Section>
+
         <Section>
           <header>
             <h3>Important Notes</h3>
@@ -37,6 +42,7 @@ export default class ViewNotes extends Component {
             <Button>Add Note</Button>
           </Link>
         </Section>
+
         <Footer />
       </React.Fragment>
     );

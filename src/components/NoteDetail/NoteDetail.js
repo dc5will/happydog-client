@@ -36,7 +36,6 @@ class NoteDetail extends Component {
     e.preventDefault();
     const id = e.target.id;
     NotesApiService.deleteComment(id);
-    console.log(id);
     const targetComment = this.state.comments.filter(
       comment => comment.id === Number(id)
     );
@@ -73,6 +72,7 @@ class NoteDetail extends Component {
         </li>
       )
     })
+
 
     return (
       <React.Fragment>

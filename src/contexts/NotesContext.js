@@ -4,8 +4,7 @@ const NotesContext = React.createContext({
   notes: [],
   error: null,
   setError: () => {},
-  clearError: () => {},
-  deleteNoteFromList: () => {}
+  clearError: () => {}
 });
 export default NotesContext;
 
@@ -28,7 +27,6 @@ export class NotesContextProvider extends Component {
     const value = {
       notes: this.state.notes,
       error: this.state.notes,
-      setNotesList: this.setNotesList,
       setError: this.setError,
       clearError: this.clearError
     };
