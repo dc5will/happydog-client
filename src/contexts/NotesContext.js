@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 const NotesContext = React.createContext({
   notes: [],
+  user: '',
   error: null,
   setError: () => {},
   clearError: () => {}

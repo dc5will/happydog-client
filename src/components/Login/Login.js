@@ -28,6 +28,9 @@ class Login extends Component {
         user_name.value = "";
         password.value = "";
         TokenService.saveAuthToken(res.authToken);
+        const user = TokenService.getUserFromToken()
+        console.log(user);
+        this.context.user = user.full_name;
         this.props.history.push("/my-notes");
         this.context.getNotes();
       })
@@ -35,6 +38,8 @@ class Login extends Component {
         this.setState({ error: res.error });
       });
   };
+
+
 
   render() {
     const { error } = this.state;

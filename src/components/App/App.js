@@ -11,8 +11,12 @@ import NotesContext from "../../contexts/NotesContext";
 import AddNote from "../AddNote/AddNote";
 import ViewNotes from "../../components/ViewNotes/ViewNotes";
 import NoteDetail from "../../components/NoteDetail/NoteDetail";
+import TokenService from '../../services/token-service';
 
 class App extends Component {
+
+  static contextType = NotesContext;
+
   state = {
     notes: [],
 
@@ -45,6 +49,11 @@ class App extends Component {
 
   componentDidMount() {
     this.state.getNotes();
+    const user = TokenService.getUserFromToken()
+    console.log(user);
+    this.setState({
+      user: user.full_name
+    })
   }
 
   render() {
