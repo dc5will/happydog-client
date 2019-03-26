@@ -26,7 +26,7 @@ export default class ViewNotes extends Component {
         <Header />
 
         <header>
-          <h2>Welcome back {this.context.user}</h2>
+          <h2>Welcome back {this.context.user}!</h2>
         </header>
 
         <Section>

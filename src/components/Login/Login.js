@@ -48,7 +48,7 @@ class Login extends Component {
       <>
         <Header />
         <Section className="LoginPage">
-          <h2> back!</h2>
+          <h2>Welcome back!</h2>
           <h3>Please log in below:</h3>
           <form className="loginForm" onSubmit={this.handleSubmitJwtAuth}>
             <div role="alert">{error && <p className="red">{error}</p>}</div>

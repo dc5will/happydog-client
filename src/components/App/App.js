@@ -47,6 +47,7 @@ class App extends Component {
 
   };
 
+  // TODO: https://github.com/auth0/jwt-decode/issues/65 error
   componentDidMount() {
     this.state.getNotes();
     const user = TokenService.getUserFromToken()
