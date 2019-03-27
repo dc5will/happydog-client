@@ -3,7 +3,7 @@ import config from "../config";
 
 //TODO: POST and GET
 const ChecklistApiService = {
-  postChecked(checked) {
+  postChecked(mealsData) {
     return fetch(`${config.API_ENDPOINT}/checklist`, {
       method: "POST",
       headers: {
@@ -11,7 +11,7 @@ const ChecklistApiService = {
         authorization: `bearer ${TokenService.getAuthToken()}`
       },
       body: JSON.stringify({
-        checked
+        mealsData
       })
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
