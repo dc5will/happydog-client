@@ -73,7 +73,7 @@ import { Section, Button } from "../../components/Utils/Utils";
 //               })}
 //             </ul>
 //           </form>
-//           <Button className="resetButton" onClick={this.handleAllTasksChecked}>
+//           <Button className="formSubmitButton" onClick={this.handleFormSubmit}>
 //             Survived the day
 //           </Button>
 //         </Section>
