@@ -5,6 +5,8 @@ import App from "./components/App/App";
 import { NotesContextProvider } from "./contexts/NotesContext";
 import "./index.css";
 
+console.log(process.env)
+
 ReactDOM.render(
   <BrowserRouter>
     <NotesContextProvider>
