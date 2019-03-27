@@ -71,7 +71,7 @@ class NoteDetail extends Component {
       // console.log(date)
       // console.log(comment)
       // console.log(comment.duedate)
-      const date = new Date(comment.date_created);
+      const date = new Date(comment.duedate);
       return (
         <li className="taskList" key={key}>
           <span className='dueDate'>Date: {(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span> - 
