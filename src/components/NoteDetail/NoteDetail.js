@@ -13,7 +13,7 @@ class NoteDetail extends Component {
 
   state = {
     comments: [],
-    dueDate: '',
+    // dueDate: '',
   };
 
 
@@ -72,13 +72,16 @@ class NoteDetail extends Component {
 
   render() {
     const comments = this.state.comments.map((comment, key) => {
-      console.log(comment.dueDate)
+      console.log(comment.duedate)
       // const date = new Date(comment.dueDate)
-      console.log(this.state.dueDate);
-      const dueDate = this.state.dueDate;
+      // console.log(this.state.dueDate);
+      const date = comment.duedate;
+      console.log(date)
+      console.log(comment)
+      console.log(comment.duedate)
       return (
         <li className="taskList" key={key}>
-          <span id="dueDate">{dueDate}</span>
+          <span id="dueDate">{date}</span> - 
           {/* <span className='dueDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span>           */}
           <span id="commentContent">{comment.content}</span>
           <button

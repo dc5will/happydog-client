@@ -41,7 +41,7 @@ const NotesApiService = {
     }).then(res => (!res.ok ? res.json().then(e => Promise.reject(e)) : null));
   },
 
-  postNewComment(noteId, comment, dueDate) {
+  postNewComment(noteId, comment, duedate) {
     return fetch(`${config.API_ENDPOINT}/comments`, {
       method: "POST",
       headers: {
@@ -51,7 +51,7 @@ const NotesApiService = {
       body: JSON.stringify({
         noteId,
         comment,
-        dueDate
+        duedate
       })
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
@@ -82,19 +82,6 @@ const NotesApiService = {
     );
   },
 
-  // grab specific user for welcome
-  // getUserName() {
-  //   return fetch(`${config.API_ENDPOINT}/users`, {
-  //     method: "GET",
-  //     headers: {
-  //       authorization: `bearer ${TokenService.getAuthToken()}`,
-  //       "content-type": "application/json"
-  //     }
-  //   }).then(res =>
-  //     !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
-  //   );
-  // },
-  
 
 };
 
