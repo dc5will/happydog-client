@@ -6,7 +6,6 @@ import { Section } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
 // import { Link } from "react-router-dom";
 import "./NoteDetail.css";
-import Calendar from "react-calendar";
 
 class NoteDetail extends Component {
   static contextType = NotesContext;
@@ -60,9 +59,6 @@ class NoteDetail extends Component {
 
   render() {
     const comments = this.state.comments.map((comment, key) => {
-      // console.log(date)
-      // console.log(comment)
-      // console.log(comment.duedate)
       const date = new Date(comment.duedate);
       return (
         <li className="taskList" key={key}>
