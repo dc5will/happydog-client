@@ -1,0 +1,12 @@
+.noteItem {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.notesContainer {
+    display: flex;
+    flex-direction: column;
+}

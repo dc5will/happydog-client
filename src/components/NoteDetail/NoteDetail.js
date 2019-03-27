@@ -25,7 +25,6 @@ class NoteDetail extends Component {
       .then(comment =>
         this.setState({
           comments: [...this.state.comments, comment],
-          // dueDate: dueDate.value
         })
       )
       .then(document.getElementById("commentsForm").reset());
@@ -58,12 +57,6 @@ class NoteDetail extends Component {
           comments,
         })
     );
-    // NotesApiService.getComments(Number(this.props.match.params.noteId)).then(
-    //   dueDate =>
-    //     this.setState({
-    //       dueDate: String(dueDate.value),
-    //     })
-    // );
   }
 
   render() {
@@ -74,7 +67,7 @@ class NoteDetail extends Component {
       const date = new Date(comment.duedate);
       return (
         <li className="taskList" key={key}>
-          <span className='dueDate'>Date: {(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span> - 
+          <span className='dueDate'>Due: {(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span> - 
           <span id="commentContent">{comment.content}</span>
           <button
             className="commentDelete"
