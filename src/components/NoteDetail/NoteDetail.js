@@ -13,7 +13,6 @@ class NoteDetail extends Component {
 
   state = {
     comments: [],
-    // dueDate: '',
   };
 
 
@@ -26,7 +25,7 @@ class NoteDetail extends Component {
       .then(comment =>
         this.setState({
           comments: [...this.state.comments, comment],
-          dueDate: dueDate.value
+          // dueDate: dueDate.value
         })
       )
       .then(document.getElementById("commentsForm").reset());
@@ -59,30 +58,23 @@ class NoteDetail extends Component {
           comments,
         })
     );
-    NotesApiService.getComments(Number(this.props.match.params.noteId)).then(
-      dueDate =>
-        this.setState({
-          dueDate: String(dueDate.value),
-        })
-    );
+    // NotesApiService.getComments(Number(this.props.match.params.noteId)).then(
+    //   dueDate =>
+    //     this.setState({
+    //       dueDate: String(dueDate.value),
+    //     })
+    // );
   }
-
-  // trying out react-calendar
-  // onChange = dueDate => this.setState({ dueDate })
 
   render() {
     const comments = this.state.comments.map((comment, key) => {
-      console.log(comment.duedate)
-      // const date = new Date(comment.dueDate)
-      // console.log(this.state.dueDate);
-      const date = comment.duedate;
-      console.log(date)
-      console.log(comment)
-      console.log(comment.duedate)
+      // console.log(date)
+      // console.log(comment)
+      // console.log(comment.duedate)
+      const date = new Date(comment.date_created);
       return (
         <li className="taskList" key={key}>
-          <span id="dueDate">{date}</span> - 
-          {/* <span className='dueDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span>           */}
+          <span className='dueDate'>Date: {(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span> - 
           <span id="commentContent">{comment.content}</span>
           <button
             className="commentDelete"
@@ -107,15 +99,14 @@ class NoteDetail extends Component {
             Enter Task:
             <input className="commentsInput" name="comments" />
             <br />
-            Enter Due Date:
-            {/* <Calendar onChange={this.onChange} value={this.state.dueDate} */}
+            Select Due Date:
             <input className='dueDate' name='dueDate'
               type="date"
               id="dueDate"
-              value={this.state.dueDate}
-              onChange={event =>
-                this.setState({ dueDate: event.target.value })
-              }
+              // value={this.state.dueDate}
+              // onChange={event =>
+              //   this.setState({ dueDate: event.target.value })
+              // }
             /> < br />
             <button className="addButton" type="submit">
               Add Task

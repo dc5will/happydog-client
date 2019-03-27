@@ -23,6 +23,10 @@
     padding-bottom: 20px;
 }
 
+#commentContent {
+    margin-left: 5px;
+}
+
 .commentsInput {
     margin-top: 15px;
     margin-bottom: 10px;
