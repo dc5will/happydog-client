@@ -3,7 +3,8 @@
     height: 80px;
     align-items: row;
     justify-content: center;
-    background-color: rgb(192, 81, 81);
+    background-image: linear-gradient(-90deg, rgb(192, 81, 81), rgb(180, 41, 41));
+    /* background-color: rgb(192, 81, 81); */
     color: white;
     padding-top: 10px;
 }

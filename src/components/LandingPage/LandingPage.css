@@ -58,4 +58,13 @@ ul {
     line-height: 1.5;
 }
 
+.bannerBackground {
+    background: url(../../images//happydogBanner.png) no-repeat center;
+    background-size: cover;
+    opacity: 0.85;
+    height: 400px;
+    max-width: 100%;
+}
+
+
 

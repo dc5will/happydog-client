@@ -63,7 +63,7 @@ class NoteDetail extends Component {
       return (
         <li className="taskList" key={key}>
           <span className="dueDate">
-            Due:{" "}
+            <label className="due">Due:</label>{" "}
             {date.getMonth() +
               1 +
               "/" +
@@ -86,9 +86,11 @@ class NoteDetail extends Component {
     return (
       <React.Fragment>
         <Header />
-        <Section>
+        
+        <section className="tasksBanner">
           <h1 className="taskHeader">Tasks</h1>
-        </Section>
+        </section>
+
         <Section>
           <ul>{comments}</ul>
           <form id="commentsForm" onSubmit={e => this.submitComment(e)}>

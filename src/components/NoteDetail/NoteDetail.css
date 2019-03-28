@@ -1,11 +1,33 @@
+.tasksBanner {
+    background: url(../../images/corgibanner.jpg) no-repeat, center;
+    background-size: cover;
+    opacity: 0.8;
+    height: 400px;
+    max-width: 100%;
+}
+
+.taskHeader {
+    display: flex;
+    text-shadow: 4px 4px 20px #000000;
+    justify-content: center;
+    margin-top: 150px;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: 'Dancing Script';
+    padding: 10px;
+    opacity: 100%;
+    color: white;
+}
+
+
 .commentDelete {
     border: 1px solid grey;
     background-color: crimson;
     /* font-size: 0.9em; */
-    border-radius: 50%;
-    padding: 5px;
+    border-radius: 80%;
+    padding: 4px 8px;
     /* font-weight: bold; */
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 #commentsForm {
@@ -44,14 +66,16 @@
     font-weight: bold;
 }
 
+.due {
+    color: rgb(192, 81, 81);
+    margin-right: 5px;
+}
+
 .taskList {
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-.commentDelete {
-    margin-left: 15px;
-}
 
 .addButton {
     border: 1px solid grey;

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import NotesContext from "../../contexts/NotesContext";
 import NotesApiService from "../../services/notes-api-service";
 import Header from "../../components/Header/Header";
-import { Section, Input } from "../../components/Utils/Utils";
+import { Section, Input, Button } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
+import './AddNote.css'
 
 export default class AddNote extends Component {
   static contextType = NotesContext;
@@ -20,16 +21,16 @@ export default class AddNote extends Component {
       <>
         <Header />
         <Section>
-          <form onSubmit={e => this.handleSubmit(e)}>
+          <form className='addTaskForm' onSubmit={e => this.handleSubmit(e)}>
             <label>
               <header>
                 <h3>Task Title</h3>
               </header>
               <br />
-              <Input type="text" id="name" />
+              <Input className='taskTitleInput' type="text" id="name" />
             </label>
             <br />
-            <button type="submit">Submit</button>
+            <Button className='addNoteSubmit' type="submit">Submit</Button>
           </form>
         </Section>
         <Footer />

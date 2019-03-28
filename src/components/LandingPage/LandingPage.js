@@ -8,7 +8,8 @@ export default class LandingPage extends Component {
     return (
       <>
         <Header />
-        <section>
+        <section className='bannerBackground'></section>
+        <section className='happyDogDesciption'>
           <header>
             <h3>Is Your Dog Happy?</h3>
           </header>
@@ -19,7 +20,7 @@ export default class LandingPage extends Component {
           </p>
         </section>
 
-        <section>
+        <section className='checkListDescription'>
           <header>
             <h3>Daily Checklist</h3>
             <p>
@@ -31,7 +32,7 @@ export default class LandingPage extends Component {
           </header>
         </section>
 
-        <section>
+        <section className='notesAndTaskDescription'>
           <header>
             <h3>Secured Notes and Tasks</h3>
             <p>

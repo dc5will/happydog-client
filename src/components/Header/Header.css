@@ -3,7 +3,8 @@
     justify-content: center;
     flex-wrap: wrap;
     height: 150px;
-    background-color: rgb(192, 81, 81);
+    background-image: linear-gradient(90deg, rgb(192, 81, 81), rgb(180, 41, 41));
+    /* background-color: rgb(192, 81, 81); */
 }
 
 .Header h1 {
