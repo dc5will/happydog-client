@@ -87,7 +87,7 @@ class NoteDetail extends Component {
       <React.Fragment>
         <Header />
         <Section>
-          <h1>Tasks</h1>
+          <h1 className="taskHeader">Tasks</h1>
         </Section>
         <Section>
           <ul>{comments}</ul>
@@ -97,9 +97,9 @@ class NoteDetail extends Component {
             <br />
             Select Due Date:
             <input
+              type="date"
               className="dueDate"
               name="dueDate"
-              type="date"
               id="dueDate"
             />{" "}
             <br />
