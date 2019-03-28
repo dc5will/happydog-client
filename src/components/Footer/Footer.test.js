@@ -8,7 +8,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe(`LandingPage component`, () => {
+describe(`Footer component`, () => {
   it("renders without crashing", () => {
     shallow(<Footer />);
   });
