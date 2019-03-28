@@ -79,11 +79,11 @@ exports[`renders the UI as expected 1`] = `
     <div
       className="footer_brand-container"
     >
-      <p
+      <span
         className="footer_author-text"
       >
         Created by William
-      </p>
+      </span>
       <div
         className="footer_social-media"
       />

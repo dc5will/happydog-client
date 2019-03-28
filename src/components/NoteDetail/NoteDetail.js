@@ -69,9 +69,9 @@ class NoteDetail extends Component {
               "/" +
               date.getDate() +
               "/" +
-              date.getFullYear()}
+              date.getFullYear()} -
           </span>{" "}
-          -<span id="commentContent">{comment.content}</span>
+          <span id="commentContent">{comment.content}</span>
           <button
             className="commentDelete"
             id={comment.id}
