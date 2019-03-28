@@ -26,9 +26,9 @@ export default class ViewNotes extends Component {
       <React.Fragment>
         <Header />
 
-        <header>
+        <section className='homepageBackground'>
           <h2 className='welcomeBanner'>Welcome back {this.context.user}!</h2>
-        </header>
+        </section>
 
         <Section>
           <Checklist />
