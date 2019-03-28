@@ -11,7 +11,7 @@ export default class LandingPage extends Component {
         <section className='bannerBackground'></section>
         <section className='happyDogDesciption'>
           <header>
-            <h3>Is Your Dog Happy?</h3>
+            <h2>Is Your Dog Happy?</h2>
           </header>
           <p>
             Take the guesswork out of making sure your dogs are happy by keeping
@@ -22,7 +22,7 @@ export default class LandingPage extends Component {
 
         <section className='checkListDescription'>
           <header>
-            <h3>Daily Checklist</h3>
+            <h2>Daily Checklist</h2>
             <p>
               Sometimes life is hectic and we're not sure if our furry family
               members have been taken care of. Utilize the easy to use daily
@@ -34,7 +34,7 @@ export default class LandingPage extends Component {
 
         <section className='notesAndTaskDescription'>
           <header>
-            <h3>Secured Notes and Tasks</h3>
+            <h2>Secured Notes and Tasks</h2>
             <p>
               Keep secured important notes or tasks for future vet visits or dog
               sitters. Consolidate all of your dog's important information such

@@ -59,7 +59,7 @@ class Register extends Component {
           <Input
             name='user_name'
             type='text'
-            id='RegistrationForm__user_name'
+            id='RegistrationForm_user_name'
             required>
           </Input>
         </div>
@@ -71,7 +71,7 @@ class Register extends Component {
           <Input
             name='password'
             type='password'
-            id='RegistrationForm__password'
+            id='RegistrationForm_password'
             required>
           </Input>
         </div>

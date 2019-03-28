@@ -87,7 +87,7 @@ Array [
         </label>
         <input
           className="Input "
-          id="RegistrationForm__user_name"
+          id="RegistrationForm_user_name"
           name="user_name"
           required={true}
           type="text"
@@ -108,7 +108,7 @@ Array [
         </label>
         <input
           className="Input "
-          id="RegistrationForm__password"
+          id="RegistrationForm_password"
           name="password"
           required={true}
           type="password"

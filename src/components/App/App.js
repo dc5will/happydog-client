@@ -52,7 +52,6 @@ class App extends Component {
     try {
       this.state.getNotes();
       const user = TokenService.getUserFromToken();
-      console.log(user);
       this.setState({
         user: user.full_name
       });
