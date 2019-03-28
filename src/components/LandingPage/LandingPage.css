@@ -6,6 +6,11 @@ header {
     /* padding: 10px 10px; */
 }
 
+h3 {
+    font-size: bold;
+    text-transform: uppercase;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -50,6 +55,7 @@ ul {
     margin: 10px;
     padding: 0;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 

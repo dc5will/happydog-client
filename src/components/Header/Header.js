@@ -21,7 +21,7 @@ export default class Header extends Component {
   renderLoginLink() {
     return (
       <div className="Header_not-logged-in">
-        <Link to="/login">Log in</Link>
+        <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
       </div>
     );
@@ -31,8 +31,8 @@ export default class Header extends Component {
     return (
       <React.Fragment>
         <nav className="Header">
-          <h1>
-            <Link to="/my-notes">Happy dog</Link>
+          <h1 className='happyDogLogo'>
+            <Link to="/my-notes">Happy Dog</Link>
           </h1>
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
