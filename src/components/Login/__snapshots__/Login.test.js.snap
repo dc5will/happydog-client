@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LandingPage component renders the UI as expected 1`] = `
+exports[`Login component renders the UI as expected 1`] = `
 Array [
   <nav
     className="Header"
   >
-    <h1>
+    <h1
+      className="happyDogLogo"
+    >
       <a
         href="/my-notes"
         onClick={[Function]}
       >
-        Happy dog
+        Happy Dog
       </a>
     </h1>
     <div
@@ -20,7 +22,7 @@ Array [
         href="/login"
         onClick={[Function]}
       >
-        Log in
+        Login
       </a>
       <a
         href="/register"

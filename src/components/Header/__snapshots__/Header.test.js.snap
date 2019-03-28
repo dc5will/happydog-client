@@ -4,12 +4,14 @@ exports[`Header component renders the UI as expected 1`] = `
 <nav
   className="Header"
 >
-  <h1>
+  <h1
+    className="happyDogLogo"
+  >
     <a
       href="/my-notes"
       onClick={[Function]}
     >
-      Happy dog
+      Happy Dog
     </a>
   </h1>
   <div
@@ -19,7 +21,7 @@ exports[`Header component renders the UI as expected 1`] = `
       href="/login"
       onClick={[Function]}
     >
-      Log in
+      Login
     </a>
     <a
       href="/register"
