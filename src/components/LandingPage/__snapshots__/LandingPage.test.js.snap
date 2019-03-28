@@ -32,7 +32,12 @@ Array [
       </a>
     </div>
   </nav>,
-  <section>
+  <section
+    className="bannerBackground"
+  />,
+  <section
+    className="happyDogDesciption"
+  >
     <header>
       <h3>
         Is Your Dog Happy?
@@ -42,7 +47,9 @@ Array [
       Take the guesswork out of making sure your dogs are happy by keeping track of all of your dogs needs and keep a record and journal for your beloved canine friend.
     </p>
   </section>,
-  <section>
+  <section
+    className="checkListDescription"
+  >
     <header>
       <h3>
         Daily Checklist
@@ -52,7 +59,9 @@ Array [
       </p>
     </header>
   </section>,
-  <section>
+  <section
+    className="notesAndTaskDescription"
+  >
     <header>
       <h3>
         Secured Notes and Tasks
@@ -67,7 +76,23 @@ Array [
   >
     <div
       className="footer_brand-container"
-    />
+    >
+      <p
+        className="footer_author-text"
+      >
+        Created by William
+      </p>
+      <div
+        className="footer_social-media"
+      />
+      <div
+        className="copyright-text"
+      >
+        <p>
+          Copyright © 2019
+        </p>
+      </div>
+    </div>
   </footer>,
 ]
 `;
