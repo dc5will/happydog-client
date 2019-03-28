@@ -21,7 +21,6 @@ export default class ViewNotes extends Component {
   }
 
   render() {
-    console.log(this.context.user);
     return (
       <React.Fragment>
         <Header />

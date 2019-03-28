@@ -18,7 +18,7 @@ class NoteDetail extends Component {
     e.preventDefault();
     const { comments, dueDate } = e.target;
     const noteId = this.props.match.params.noteId;
-    console.log(dueDate.value);
+    // console.log(dueDate.value);
     NotesApiService.postNewComment(noteId, comments.value, dueDate.value)
       .then(comment =>
         this.setState({
