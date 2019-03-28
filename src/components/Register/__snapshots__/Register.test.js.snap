@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register component renders the UI as expected 1`] = `
+Array [
+  <nav
+    className="Header"
+  >
+    <h1>
+      <a
+        href="/my-notes"
+        onClick={[Function]}
+      >
+        Happy dog
+      </a>
+    </h1>
+    <div
+      className="Header_not-logged-in"
+    >
+      <a
+        href="/login"
+        onClick={[Function]}
+      >
+        Log in
+      </a>
+      <a
+        href="/register"
+        onClick={[Function]}
+      >
+        Register
+      </a>
+    </div>
+  </nav>,
+  <section
+    className={
+      Array [
+        "Section",
+        undefined,
+        "Registration",
+      ]
+    }
+  >
+    <h2>
+      Welcome to Happydog
+    </h2>
+    <h3>
+      Please enter your information to sign up!
+    </h3>
+    <form
+      className="RegistrationForm"
+      onSubmit={[Function]}
+    >
+      <div
+        className="full_name"
+      >
+        <label
+          htmlFor="RegistrationForm_full_name"
+        >
+          Full name 
+          <span
+            className="Required "
+          >
+            *
+          </span>
+        </label>
+        <input
+          className="Input "
+          id="RegistrationForm_full_name"
+          name="full_name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="user_name"
+      >
+        <label
+          htmlFor="RegistrationForm_user_name"
+        >
+          User name 
+          <span
+            className="Required "
+          >
+            *
+          </span>
+        </label>
+        <input
+          className="Input "
+          id="RegistrationForm__user_name"
+          name="user_name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="password"
+      >
+        <label
+          htmlFor="RegistrationForm_password"
+        >
+          Password 
+          <span
+            className="Required "
+          >
+            *
+          </span>
+        </label>
+        <input
+          className="Input "
+          id="RegistrationForm__password"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="Button "
+        type="submit"
+      >
+        Register
+      </button>
+    </form>
+  </section>,
+  <footer
+    className="footer"
+  >
+    <div
+      className="footer_brand-container"
+    />
+  </footer>,
+]
+`;

@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage component renders the UI as expected 1`] = `
+Array [
+  <nav
+    className="Header"
+  >
+    <h1>
+      <a
+        href="/my-notes"
+        onClick={[Function]}
+      >
+        Happy dog
+      </a>
+    </h1>
+    <div
+      className="Header_not-logged-in"
+    >
+      <a
+        href="/login"
+        onClick={[Function]}
+      >
+        Log in
+      </a>
+      <a
+        href="/register"
+        onClick={[Function]}
+      >
+        Register
+      </a>
+    </div>
+  </nav>,
+  <section
+    className={
+      Array [
+        "Section",
+        undefined,
+        "LoginPage",
+      ]
+    }
+  >
+    <h2>
+      Welcome back!
+    </h2>
+    <h3>
+      Please log in below:
+    </h3>
+    <form
+      className="loginForm"
+      onSubmit={[Function]}
+    >
+      <div
+        role="alert"
+      />
+      <div
+        className="user_name"
+      >
+        <label
+          htmlFor="LoginForm__user_name"
+        >
+          User name
+        </label>
+        <input
+          className="Input "
+          id="LoginForm__user_name"
+          name="user_name"
+          required={true}
+        />
+      </div>
+      <div
+        className="password"
+      >
+        <label
+          htmlFor="LoginForm__password"
+        >
+          Password
+        </label>
+        <input
+          className="Input "
+          id="LoginForm__password"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="Button "
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
+  </section>,
+  <footer
+    className="footer"
+  >
+    <div
+      className="footer_brand-container"
+    />
+  </footer>,
+]
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage component renders the UI as expected 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footer_brand-container"
+  />
+</footer>
+`;
