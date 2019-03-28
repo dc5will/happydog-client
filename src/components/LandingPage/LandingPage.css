@@ -32,10 +32,12 @@ section:nth-child(even) {
 p {
     margin: 0 auto;
     max-width: 650px;
+    margin-bottom: 40px;
 }
 
 p+p {
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 button {
