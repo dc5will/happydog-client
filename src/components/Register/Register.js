@@ -3,6 +3,7 @@ import AuthApiService from '../../services/auth-api-service'
 import { Section, Button, Required, Input } from '../Utils/Utils';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import './Register.css';
 
 class Register extends Component {
   static defaultProps = {
@@ -74,7 +75,7 @@ class Register extends Component {
             required>
           </Input>
         </div>
-        <Button type='submit'>
+        <Button className='registerButton' type='submit'>
             Register
         </Button>
       </form>

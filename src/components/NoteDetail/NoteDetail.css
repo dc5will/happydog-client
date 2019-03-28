@@ -61,7 +61,7 @@
 .dueDate, #commentContent {
     margin-bottom: 15px;
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.5;
     font-weight: bold;
 }
@@ -73,13 +73,13 @@
 
 .taskList {
     margin-bottom: 10px;
-    font-size: 18px;
+    /* font-size: 8px; */
 }
 
 
 .addButton {
     border: 1px solid grey;
-    background-color: green;
+    background-color: rgb(95, 160, 9);
     font-size: 1em;
     border-radius: 20px;
     padding: 8px 12px;
@@ -117,3 +117,12 @@
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
     width: 190px;
   }
+
+
+
+@media only screen and (min-width: 377px) {
+    .dueDate, #commentContent {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}

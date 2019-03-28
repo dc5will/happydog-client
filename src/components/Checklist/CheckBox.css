@@ -1,3 +1,35 @@
-/* input[type="checkbox"] {
-    
-  } */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+
+
+ul.noteItem {
+  background-color: rgb(192, 81, 81);
+  font-size: 20px;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+ul.noteItem:hover, ul.noteItem:active {
+  background-color: white;
+  color: rgb(192, 81, 81);
+}
+
+ul:last-child {
+  margin-bottom: 30px;
+}

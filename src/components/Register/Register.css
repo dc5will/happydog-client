@@ -1,11 +1,12 @@
-.loginForm {
-    margin-bottom: 30px;
+.RegistrationForm {
+    margin: 30px;
 }
 
-.loginButton {
-    margin-top: 20px;
+.registerButton {
+    margin: 40px;
     font-size: 24px;
     background-color: rgb(95, 160, 9);
+
 }
 
 label {

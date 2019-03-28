@@ -65,7 +65,7 @@ class Login extends Component {
                 id="LoginForm__password"
               />
             </div>
-            <Button type="submit">Login</Button>
+            <Button className='loginButton' type="submit">Login</Button>
           </form>
         </Section>
         <Footer />

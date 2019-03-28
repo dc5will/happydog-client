@@ -39,7 +39,7 @@ export default class ViewNotes extends Component {
             <h3>Important Notes</h3>
           </header>
           <Link to="/add-note">
-            <Button>Add Note</Button>
+            <Button className='addNoteButton'>Add Note</Button>
           </Link>
           <ul className='notesList'>{this.createList(this.context.notes)}</ul>
         </Section>
