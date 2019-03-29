@@ -37,16 +37,16 @@ ul {
     margin-bottom: 25px;
     font-size: 16px;
     font-weight: bolder;
-    background-color: rgb(192, 81, 81);
+    background-color: rgb(90, 192, 81);
     cursor: pointer;
 }
 
 
-.addNoteButton:hover {
-    background-color: rgb(156, 42, 42);
+.addNotesFolder:hover {
+    background-color: rgb(18, 92, 30);
 }
 
-.addNoteButton:active {
+.addNotesFolder:active {
     background-color: rgb(156, 42, 42);
     box-shadow: 0 5px #666;
     transform: translateY(2px);

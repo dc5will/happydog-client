@@ -29,7 +29,7 @@ export default class AddNote extends Component {
 
         <Section>
           <form className="addTaskForm" onSubmit={e => this.handleSubmit(e)}>
-            <label htmlFor='enterTitle' className='titleLabel'>Enter Title:
+            <label htmlFor='enterTitle' className='titleLabel'>Enter Task Title Below:
               <br />
               <Input className="taskTitleInput" type="text" id="name" />
             </label>

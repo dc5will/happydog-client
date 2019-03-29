@@ -84,18 +84,16 @@ class NoteDetail extends Component {
       );
     });
 
-    // TODO: filtering the correct object, but cant get key value from it.
-    const name = this.context.notes.filter(
+    const displayTaskName = this.context.notes.filter(
       note => note.id === Number(this.props.match.params.noteId)
     );
-    console.log(name[0]);
 
     return (
       <React.Fragment>
         <Header />
 
         <section className="tasksBanner">
-          <h1 className="taskHeader">Tasks</h1>
+          <h1 className="taskHeader">{displayTaskName[0] ? displayTaskName[0].name : null}</h1>
         </section>
 
         <Section>
