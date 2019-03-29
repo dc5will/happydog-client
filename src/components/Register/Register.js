@@ -76,7 +76,7 @@ class Register extends Component {
           </Input>
         </div>
         <Button className='registerButton' type='submit'>
-            Register
+            Register <i className="fas fa-user-plus"></i>
         </Button>
       </form>
       </Section>

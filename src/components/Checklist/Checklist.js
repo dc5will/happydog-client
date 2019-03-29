@@ -51,10 +51,10 @@ export default class Checklist extends Component {
             })}
           </ul>
           <Button className="resetButton" onClick={this.handleAllTasksChecked}>
-            Survived the day
+            Survived the day<i className="fas fa-paw"></i>
           </Button>
         </Section>
-        <WalkedChecklist />
+        {/* <WalkedChecklist /> */}
       </React.Fragment>
     );
   }

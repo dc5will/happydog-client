@@ -1,7 +1,21 @@
+.addTaskForm {
+    padding: 40px;
+}
+
+
 .addNoteSubmit {
+    margin: 40px;
+    font-size: 24px;
+    background-color: rgb(192, 81, 81);
     margin-bottom: 20px;
 }
 
-.addTaskForm {
-    padding: 40px;
+.addNoteSubmit:hover {
+    background-color: rgb(139, 36, 36);
+}
+
+.addNoteSubmit:active {
+    background-color: rgb(138, 32, 32);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
 }

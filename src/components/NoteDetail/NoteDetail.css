@@ -23,12 +23,21 @@
 .commentDelete {
     border: 1px solid grey;
     background-color: crimson;
-    /* font-size: 0.9em; */
     border-radius: 80%;
     padding: 4px 8px;
-    /* font-weight: bold; */
     margin-left: 15px;
 }
+
+.commentDelete:hover {
+    background-color: rgb(131, 39, 39);
+}
+
+.commentDelete:active {
+    background-color: rgb(131, 39, 39);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
 
 #commentsForm {
     padding-bottom: 20px;
@@ -42,7 +51,7 @@
 
 .commentsInput {
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     margin-left: 10px;
     border: 1px solid #c4c4c4;
     line-height: 1.2;
@@ -66,35 +75,60 @@
 }
 
 .due {
-    color: rgb(192, 81, 81);
+    color: rgb(202, 55, 85);
     margin-right: 5px;
 }
 
 .taskList {
     margin-bottom: 25px;
-    /* font-size: 8px; */
 }
 
 
-.addButton {
-    border: 1px solid grey;
-    background-color: rgb(95, 160, 9);
+.addTaskButton {
+    margin-top: 25px;
+    border: 2px solid grey;
+    background-color: rgba(61, 170, 76, 0.795);
     font-size: 1em;
-    border-radius: 20px;
-    padding: 8px 12px;
     font-weight: bold;
     margin: 10px;
 }
 
+.addTaskButton:hover {
+    background-color: rgb(31, 114, 42);
+}
+
+.addTaskButton:active {
+    background-color: rgba(79, 184, 93, 0.795);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
+
 .deleteNote {
-    border: 1px solid grey;
-    background-color: crimson;
+    border: 2px solid grey;
+    background-color: rgb(202, 55, 85);
     font-size: 1em;
-    border-radius: 20px;
-    padding: 8px 12px;
     font-weight: bold;
     margin: 10px;
     margin-top: 30px;
+}
+
+.deleteNote:hover {
+    background-color: rgb(179, 24, 55);
+}
+
+.deleteNote:active {
+    background-color: rgba(79, 184, 93, 0.795);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
+.fa-folder-minus {
+    margin-left: 5px;
+}
+
+.fa-tasks {
+    margin-left: 5px;
 }
 
 [type="date"] {

@@ -77,7 +77,7 @@ class NoteDetail extends Component {
             id={comment.id}
             onClick={e => this.deleteComment(e)}
           >
-            x
+            <i className="far fa-trash-alt"></i>
           </button>
         </li>
       );
@@ -105,8 +105,8 @@ class NoteDetail extends Component {
               id="dueDate"
             />{" "}
             <br />
-            <button className="addButton" type="submit">
-              Add Task
+            <button className="addTaskButton" type="submit">
+              Add Task <i className="fas fa-tasks"></i>
             </button>
             <button
               className="deleteNote"
@@ -114,7 +114,7 @@ class NoteDetail extends Component {
                 this.deleteNote(Number(this.props.match.params.noteId))
               }
             >
-              Delete note
+              Delete <i className="fas fa-folder-minus"></i>
             </button>
           </form>
         </Section>

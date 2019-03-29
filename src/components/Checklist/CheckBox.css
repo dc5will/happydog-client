@@ -12,7 +12,10 @@ li {
   margin: 10px;
 }
 
-
+h3 {
+  font-family: 'dancing script';
+  font-size: 34px;
+}
 
 ul.noteItem {
   background-color: rgb(192, 81, 81);
@@ -22,7 +25,7 @@ ul.noteItem {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 10px;
+
 }
 
 ul.noteItem:hover, ul.noteItem:active {
@@ -32,4 +35,8 @@ ul.noteItem:hover, ul.noteItem:active {
 
 ul:last-child {
   margin-bottom: 30px;
+}
+
+.fa-sticky-note {
+  margin-left: 10px;
 }

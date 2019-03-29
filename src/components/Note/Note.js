@@ -8,7 +8,7 @@ export default class Note extends Component {
     return (
       <div className='notesContainer'>
         <Link to={`/my-notes/${this.props.note.id}`}>
-          <ul className='noteItem'>{this.props.note.name}</ul>
+          <ul className='noteItem'>{this.props.note.name}<i className="fas fa-sticky-note"></i></ul>
         </Link>
       </div>
     );

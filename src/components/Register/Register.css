@@ -5,8 +5,17 @@
 .registerButton {
     margin: 40px;
     font-size: 24px;
-    background-color: rgb(95, 160, 9);
+    background-color: rgb(192, 81, 81);
+}
 
+.registerButton:hover {
+    background-color: rgb(139, 36, 36);
+}
+
+.registerButton:active {
+    background-color: rgb(138, 32, 32);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
 }
 
 label {

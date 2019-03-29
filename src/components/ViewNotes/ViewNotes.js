@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 import Checklist from "../../components/Checklist/Checklist";
 import { Button, Section } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
-import './ViewNotes.css'
+import "./ViewNotes.css";
 // import NotesApiService from "../../services/notes-api-service";
 
 export default class ViewNotes extends Component {
@@ -25,23 +25,24 @@ export default class ViewNotes extends Component {
       <React.Fragment>
         <Header />
 
-        <section className='homeBannerBackground'>
-          <h2 className='welcomeBanner'>Welcome back {this.context.user}!</h2>
+        <section className="homeBannerBackground">
+          <h2 className="welcomeBanner">Welcome back {this.context.user}!</h2>
         </section>
 
         <Section>
           <Checklist />
         </Section>
 
-        <Section>
+        <Section className='importantNotes'>
           <header>
             <h3>Important Notes</h3>
           </header>
+          <ul className="notesList">{this.createList(this.context.notes)}</ul>
           <Link to="/add-note">
-            <Button className='addNoteButton'>Add Note</Button>
+            <Button className='addNotesFolder'><i className="fas fa-folder-plus fa-3x"></i></Button>
           </Link>
-          <ul className='notesList'>{this.createList(this.context.notes)}</ul>
         </Section>
+        
 
         <Footer />
       </React.Fragment>
