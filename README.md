@@ -1,7 +1,7 @@
 
 
 
-
+![alt text](https://github.com/dc5will/happydog-client/blob/master/landingpage.jpg)
 
 
 
