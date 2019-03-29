@@ -16,8 +16,8 @@ export default class LandingPage extends Component {
           <p>
             Take the guesswork out of making sure your dogs are happy by keeping
             track of all of their basic needs. Ensure someone in your
-            family takes care of your helpless furry friend basic needs and more.
-            Also, keep organized notes and important tasks all in one place.
+            family takes care of your furry friend's basic needs and more.
+            
           </p>
         </section>
 
@@ -38,8 +38,8 @@ export default class LandingPage extends Component {
             <h2>Secured Notes and Tasks</h2>
             <p>
               Keep secured important notes and tasks for your dog. Consolidate
-              notes of your dogs most important needs and assign tasks with 
-              dates to accomplish the necessary tasks in order to keep your dog
+              notes of your dog's most important needs and assign tasks with 
+              dates in order to keep your dog
               healthy and happy.
             </p>
           </header>
