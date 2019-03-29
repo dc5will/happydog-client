@@ -1,26 +1,27 @@
 import React, { Component } from "react";
 import "./LandingPage.css";
 import Header from "../../components/Header/Header";
-import Footer from '../../components/Footer/Footer';
+import Footer from "../../components/Footer/Footer";
 
 export default class LandingPage extends Component {
   render() {
     return (
       <>
         <Header />
-        <section className='bannerBackground'></section>
-        <section className='happyDogDesciption'>
+        <section className="bannerBackground" />
+        <section className="happyDogDesciption">
           <header>
             <h2>Is Your Dog Happy?</h2>
           </header>
           <p>
             Take the guesswork out of making sure your dogs are happy by keeping
-            track of all of your dogs needs and keep a record and journal for
-            your beloved canine friend.
+            track of all of their basic needs. Ensure someone in your
+            family takes care of your helpless furry friend basic needs and more.
+            Also, keep organized notes and important tasks all in one place.
           </p>
         </section>
 
-        <section className='checkListDescription'>
+        <section className="checkListDescription">
           <header>
             <h2>Daily Checklist</h2>
             <p>
@@ -32,14 +33,14 @@ export default class LandingPage extends Component {
           </header>
         </section>
 
-        <section className='notesAndTaskDescription'>
+        <section className="notesAndTaskDescription">
           <header>
             <h2>Secured Notes and Tasks</h2>
             <p>
-              Keep secured important notes or tasks for future vet visits or dog
-              sitters. Consolidate all of your dog's important information such
-              as vaccination records, allergies, special care instructions, and
-              memories.
+              Keep secured important notes and tasks for your dog. Consolidate
+              notes of your dogs most important needs and assign tasks with 
+              dates to accomplish the necessary tasks in order to keep your dog
+              healthy and happy.
             </p>
           </header>
         </section>
