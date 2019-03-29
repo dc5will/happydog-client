@@ -4,8 +4,8 @@ import TokenService from "../../services/token-service";
 import NotesContext from "../../contexts/NotesContext";
 import Header from "../../components/Header/Header";
 import { Input, Button, Section } from "../../components/Utils/Utils";
-import Footer from '../../components/Footer/Footer'
-import './Login.css'
+import Footer from "../../components/Footer/Footer";
+import "./Login.css";
 
 class Login extends Component {
   static defaultProps = {
@@ -15,10 +15,10 @@ class Login extends Component {
 
   state = { error: null };
 
-  handleSubmitJwtAuth = ev => {
-    ev.preventDefault();
+  handleSubmitJwtAuth = e => {
+    e.preventDefault();
     this.setState({ error: null });
-    const { user_name, password } = ev.target;
+    const { user_name, password } = e.target;
 
     AuthApiService.postLogin({
       user_name: user_name.value,
@@ -28,8 +28,8 @@ class Login extends Component {
         user_name.value = "";
         password.value = "";
         TokenService.saveAuthToken(res.authToken);
-        const user = TokenService.getUserFromToken()
-        console.log(user);
+        const user = TokenService.getUserFromToken();
+        // console.log(user);
         this.context.user = user.full_name;
         this.props.history.push("/my-notes");
         this.context.getNotes();
@@ -38,8 +38,6 @@ class Login extends Component {
         this.setState({ error: res.error });
       });
   };
-
-
 
   render() {
     const { error } = this.state;
@@ -54,7 +52,12 @@ class Login extends Component {
             <div role="alert">{error && <p className="red">{error}</p>}</div>
             <div className="user_name">
               <label htmlFor="LoginForm__user_name">User name</label>
-              <Input required name="user_name" id="LoginForm__user_name" placeholder='demo_user'/>
+              <Input
+                required
+                name="user_name"
+                id="LoginForm__user_name"
+                placeholder="demo_user"
+              />
             </div>
             <div className="password">
               <label htmlFor="LoginForm__password">Password</label>
@@ -63,10 +66,12 @@ class Login extends Component {
                 name="password"
                 type="password"
                 id="LoginForm__password"
-                placeholder='Demo123!'
+                placeholder="Demo123!"
               />
             </div>
-            <Button className='loginButton' type="submit">Login <i className="fas fa-sign-in-alt"></i></Button>
+            <Button className="loginButton" type="submit">
+              Login <i className="fas fa-sign-in-alt" />
+            </Button>
           </form>
         </Section>
         <Footer />
