@@ -66,6 +66,7 @@ Array [
           className="Input "
           id="LoginForm__user_name"
           name="user_name"
+          placeholder="demo_user"
           required={true}
         />
       </div>
@@ -81,6 +82,7 @@ Array [
           className="Input "
           id="LoginForm__password"
           name="password"
+          placeholder="Demo123!"
           required={true}
           type="password"
         />
@@ -89,7 +91,10 @@ Array [
         className="Button loginButton"
         type="submit"
       >
-        Login
+        Login 
+        <i
+          className="fas fa-sign-in-alt"
+        />
       </button>
     </form>
   </section>,

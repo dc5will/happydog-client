@@ -7,7 +7,7 @@ import Checklist from "../../components/Checklist/Checklist";
 import { Button, Section } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
 import "./ViewNotes.css";
-import WalkedChecklist from '../../components/Checklist/WalkedChecklist';
+import WalkedChecklist from "../../components/Checklist/WalkedChecklist";
 // import NotesApiService from "../../services/notes-api-service";
 
 export default class ViewNotes extends Component {
@@ -18,7 +18,7 @@ export default class ViewNotes extends Component {
   static contextType = NotesContext;
 
   createList(notes) {
-    return notes.map((note, i) => <Note key={i} note={note} />);
+    return notes.map((note, i) => <Note note={note} key={i} />);
   }
 
   render() {
@@ -38,16 +38,17 @@ export default class ViewNotes extends Component {
           <WalkedChecklist />
         </Section>
 
-        <Section className='importantNotes'>
+        <Section className="importantNotes">
           <header>
             <h3>Important Notes</h3>
           </header>
           <ul className="notesList">{this.createList(this.context.notes)}</ul>
           <Link to="/add-note">
-            <Button className='addNotesFolder'><i className="fas fa-folder-plus fa-3x"></i></Button>
+            <Button className="addNotesFolder">
+              <i className="fas fa-folder-plus fa-3x" />
+            </Button>
           </Link>
         </Section>
-        
 
         <Footer />
       </React.Fragment>

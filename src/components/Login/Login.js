@@ -54,7 +54,7 @@ class Login extends Component {
             <div role="alert">{error && <p className="red">{error}</p>}</div>
             <div className="user_name">
               <label htmlFor="LoginForm__user_name">User name</label>
-              <Input required name="user_name" id="LoginForm__user_name" />
+              <Input required name="user_name" id="LoginForm__user_name" placeholder='demo_user'/>
             </div>
             <div className="password">
               <label htmlFor="LoginForm__password">Password</label>
@@ -63,6 +63,7 @@ class Login extends Component {
                 name="password"
                 type="password"
                 id="LoginForm__password"
+                placeholder='Demo123!'
               />
             </div>
             <Button className='loginButton' type="submit">Login <i className="fas fa-sign-in-alt"></i></Button>

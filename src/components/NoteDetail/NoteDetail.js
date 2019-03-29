@@ -69,7 +69,8 @@ class NoteDetail extends Component {
               "/" +
               date.getDate() +
               "/" +
-              date.getFullYear()} -
+              date.getFullYear()}{" "}
+            -
           </span>{" "}
           <span id="commentContent">{comment.content}</span>
           <button
@@ -77,16 +78,22 @@ class NoteDetail extends Component {
             id={comment.id}
             onClick={e => this.deleteComment(e)}
           >
-            <i className="far fa-trash-alt"></i>
+            <i className="far fa-trash-alt" />
           </button>
         </li>
       );
     });
 
+    // TODO: filtering the correct object, but cant get key value from it.
+    const name = this.context.notes.filter(
+      note => note.id === Number(this.props.match.params.noteId)
+    );
+    console.log(name[0]);
+
     return (
       <React.Fragment>
         <Header />
-        
+
         <section className="tasksBanner">
           <h1 className="taskHeader">Tasks</h1>
         </section>
@@ -106,7 +113,7 @@ class NoteDetail extends Component {
             />{" "}
             <br />
             <button className="addTaskButton" type="submit">
-              Add Task <i className="fas fa-tasks"></i>
+              Add Task <i className="fas fa-tasks" />
             </button>
             <button
               className="deleteNote"
@@ -114,7 +121,7 @@ class NoteDetail extends Component {
                 this.deleteNote(Number(this.props.match.params.noteId))
               }
             >
-              Delete <i className="fas fa-folder-minus"></i>
+              Delete <i className="fas fa-folder-minus" />
             </button>
           </form>
         </Section>

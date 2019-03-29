@@ -118,7 +118,10 @@ Array [
         className="Button registerButton"
         type="submit"
       >
-        Register
+        Register 
+        <i
+          className="fas fa-user-plus"
+        />
       </button>
     </form>
   </section>,

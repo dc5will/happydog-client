@@ -4,7 +4,7 @@ import NotesApiService from "../../services/notes-api-service";
 import Header from "../../components/Header/Header";
 import { Section, Input, Button } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
-import './AddNote.css'
+import "./AddNote.css";
 
 export default class AddNote extends Component {
   static contextType = NotesContext;
@@ -20,17 +20,23 @@ export default class AddNote extends Component {
     return (
       <>
         <Header />
+
+        <section className="addNoteBannerBackground">
+          <header>
+            <h2 className='taskBanner'>Task Title</h2>
+          </header>
+        </section>
+
         <Section>
-          <form className='addTaskForm' onSubmit={e => this.handleSubmit(e)}>
-            <label>
-              <header>
-                <h3>Task Title</h3>
-              </header>
+          <form className="addTaskForm" onSubmit={e => this.handleSubmit(e)}>
+            <label htmlFor='enterTitle' className='titleLabel'>Enter Title:
               <br />
-              <Input className='taskTitleInput' type="text" id="name" />
+              <Input className="taskTitleInput" type="text" id="name" />
             </label>
             <br />
-            <Button className='addNoteSubmit' type="submit">Submit</Button>
+            <Button className="addNoteSubmit" type="submit">
+              Submit
+            </Button>
           </form>
         </Section>
         <Footer />
