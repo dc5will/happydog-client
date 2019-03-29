@@ -25,7 +25,6 @@ h1 {
     color: white;
     text-decoration: none;
     margin: 10px;
-    
 }
 
 .Header_not-logged-in, .Header_logged-in {
@@ -44,54 +43,6 @@ h1 {
 }
 
 
-/* @media only screen and (min-width: 420px) {
-    .Header {
-        display: flex;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        padding: 17px;
-        height: 165px;
-    }
-} */
-
-/* @media only screen and (min-width: 480px) {
-    .Header {
-        height: 80px;
-        align-items: normal;
-        justify-content: space-between;
-    }
-    
-    .Header h1 {
-        margin: 5px;
-    }
-    
-    h1 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 42px;
-    }
-    
-    .Header a {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        margin: 10px;
-    }
-    
-    .Header_not-logged-in, .Header_logged-in {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: flex-end;
-        font-family: 'Montserrat',sans-serif;
-        text-transform: uppercase;
-        font-size: 18px;
-        margin-right: 10px;
-    }
-} */
-
 @media only screen and (min-width: 600px) {
     .Header_not-logged-in, .Header_logged-in {
         display: flex;
@@ -100,8 +51,20 @@ h1 {
         justify-content: flex-end;
         font-family: 'Montserrat',sans-serif;
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 20px;
         margin-right: 10px;
+    }
+
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 38px;
+    }
+
+    .Header {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 85px;
     }
 }
 
