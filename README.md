@@ -1,6 +1,6 @@
 
 
-Introduction
+## Introduction
 
 Take the guesswork out of making sure your dogs are happy by keeping track of all of their basic needs. Ensure someone in your family takes care of your furry friend's basic needs and more. Sometimes life is hectic and we're not sure if our furry family members have been taken care of. Utilize the easy to use daily checklist with your family to make sure someone in your family has fed and/or walked your dog. Keep secured important notes and tasks for your dog. Consolidate notes of your dog's most important needs and assign tasks with dates in order to keep your dog healthy and happy.
 
@@ -18,8 +18,6 @@ Task Page
 
 ![alt text](https://github.com/dc5will/happydog-client/blob/master/taskpage.jpg)
 
-
-https://github.com/dc5will/happydog-client/blob/master/taskpage.jpg
 
 ## Setting Up
 
