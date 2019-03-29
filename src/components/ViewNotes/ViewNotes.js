@@ -6,9 +6,8 @@ import Header from "../../components/Header/Header";
 import Checklist from "../../components/Checklist/Checklist";
 import { Button, Section } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
-import "./ViewNotes.css";
 import WalkedChecklist from "../../components/Checklist/WalkedChecklist";
-// import NotesApiService from "../../services/notes-api-service";
+import "./ViewNotes.css";
 
 export default class ViewNotes extends Component {
   state = {

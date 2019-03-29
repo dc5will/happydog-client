@@ -18,7 +18,6 @@ class App extends Component {
 
   state = {
     notes: [],
-    user: '',
     error: null,
 
     getNotes: () => {
@@ -29,13 +28,13 @@ class App extends Component {
       });
     },
 
-    addNote: (note) => {
+    addNote: note => {
       this.setState({
         notes: [...this.state.notes, note]
       });
     },
 
-    deleteNote: (id) => {
+    deleteNote: id => {
       const targetNote = this.state.notes.filter(note => note.id === id);
       const newNotes = this.state.notes;
       newNotes.splice(this.state.notes.indexOf(targetNote[0]), 1);
@@ -45,12 +44,9 @@ class App extends Component {
     }
   };
 
-  // NOTE: https://github.com/auth0/jwt-decode/issues/65 error
-  // replicate error: make changes to pages that are not private route
-  // fix error: comment out code below and uncomment and reload when on homepage
   componentDidMount() {
     try {
-      this.state.getNotes();
+      // this.state.getNotes();
       const user = TokenService.getUserFromToken();
       this.setState({
         user: user.full_name

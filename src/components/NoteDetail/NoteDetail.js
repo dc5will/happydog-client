@@ -102,7 +102,7 @@ class NoteDetail extends Component {
           <ul>{comments}</ul>
           <form id="commentsForm" onSubmit={e => this.submitComment(e)}>
             Enter Task:
-            <input className="commentsInput" name="comments" />
+            <input className="commentsInput" name="comments" required />
             <br />
             Select Due Date:
             <input
@@ -110,6 +110,7 @@ class NoteDetail extends Component {
               className="dueDate"
               name="dueDate"
               id="dueDate"
+              required
             />{" "}
             <br />
             <button className="addTaskButton" type="submit">
