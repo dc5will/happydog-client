@@ -2,13 +2,10 @@
     box-sizing: border-box;
 }
 
-header {
-    /* padding: 10px 10px; */
-}
-
-h3 {
+h2 {
     font-size: bold;
     text-transform: uppercase;
+    font-size: 26px;
 }
 
 body {
@@ -33,6 +30,7 @@ p {
     margin: 0 auto;
     max-width: 650px;
     margin-bottom: 40px;
+    line-height: 1.7;
 }
 
 p+p {

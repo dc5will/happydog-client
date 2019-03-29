@@ -2,41 +2,49 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 150px;
+    height: 60px;
     background-image: linear-gradient(90deg, rgb(192, 81, 81), rgb(180, 41, 41));
     /* background-color: rgb(192, 81, 81); */
 }
 
 .Header h1 {
-    margin: 10px;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 42px;
+    font-size: 28px;
 }
 
 .Header a {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     color: white;
     text-decoration: none;
     margin: 10px;
+    
 }
 
 .Header_not-logged-in, .Header_logged-in {
     display: flex;
     flex: 1;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
     font-family: 'Montserrat',sans-serif;
     text-transform: uppercase;
-    font-size: 16px;
-    margin-right: 10px;
+    font-size: 14px;
 }
 
-@media only screen and (min-width: 377px) {
+.happyDogLogo {
+    margin: 0px;
+    margin-left: 5px;
+}
+
+
+/* @media only screen and (min-width: 420px) {
     .Header {
         display: flex;
         justify-content: center;
@@ -45,14 +53,11 @@ h1 {
         padding: 17px;
         height: 165px;
     }
-}
+} */
 
-
-
-
-@media only screen and (min-width: 480px) {
+/* @media only screen and (min-width: 480px) {
     .Header {
-        height: 130px;
+        height: 80px;
         align-items: normal;
         justify-content: space-between;
     }
@@ -67,6 +72,9 @@ h1 {
     }
     
     .Header a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         color: white;
         text-decoration: none;
         margin: 10px;
@@ -82,7 +90,7 @@ h1 {
         font-size: 18px;
         margin-right: 10px;
     }
-}
+} */
 
 @media only screen and (min-width: 600px) {
     .Header_not-logged-in, .Header_logged-in {
@@ -92,7 +100,7 @@ h1 {
         justify-content: flex-end;
         font-family: 'Montserrat',sans-serif;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 16px;
         margin-right: 10px;
     }
 }

@@ -1,7 +1,6 @@
 import TokenService from "../services/token-service";
 import config from "../config";
 
-//TODO: POST and GET
 const ChecklistApiService = {
   postChecked(value) {
     return fetch(`${config.API_ENDPOINT}/checklist`, {
