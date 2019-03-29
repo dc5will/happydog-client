@@ -48,7 +48,7 @@ export default class WalkedChecklist extends Component {
             })}
           </ul>
           <Button className="resetButton" onClick={this.handleAllWalkedChecked}>
-            Successfully Walked
+            Successfully Walked <i className="fas fa-dog"></i>
           </Button>
         </div>
       </React.Fragment>

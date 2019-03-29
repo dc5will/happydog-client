@@ -54,7 +54,7 @@ export default class Checklist extends Component {
             Survived the day<i className="fas fa-paw"></i>
           </Button>
         </Section>
-        {/* <WalkedChecklist /> */}
+        <WalkedChecklist />
       </React.Fragment>
     );
   }

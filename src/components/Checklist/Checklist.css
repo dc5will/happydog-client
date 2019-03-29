@@ -9,6 +9,7 @@
     margin-bottom: 20px;
     background-color: rgb(192, 81, 81);
     padding: 8px 12px;
+    cursor: pointer;
 }
 
 .resetButton:hover {

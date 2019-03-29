@@ -38,6 +38,7 @@ ul {
     font-size: 24px;
     font-weight: bolder;
     background-color: rgb(192, 81, 81);
+    cursor: pointer;
 }
 
 
