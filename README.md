@@ -15,6 +15,7 @@ Home Page for Tasks
 ![alt text](https://github.com/dc5will/happydog-client/blob/master/homepage2.jpg)
 
 Task Page
+
 ![alt text](https://github.com/dc5will/happydog-client/blob/master/taskpage.jpg)
 
 
