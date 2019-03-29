@@ -20,7 +20,7 @@ Take the guesswork out of making sure your dogs are happy by keeping track of al
 
 ## Setting Up
 
-- git clone git@github.com:dc5will/happydog-server.git
+- `git clone git@github.com:dc5will/happydog-server.git`
 - Install dependencies: `npm install`
 - Create development and test databases: `createdb happydog`, `createdb happydog-test`
 - Create database user: `createuser happydog`
