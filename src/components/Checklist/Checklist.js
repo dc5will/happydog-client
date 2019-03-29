@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CheckBox from "./CheckBox";
 import "./Checklist.css";
-import WalkedChecklist from "./WalkedChecklist";
 import { Section, Button } from "../../components/Utils/Utils";
 // import ChecklistApiService from "../../services/checklist-api-service";
 
@@ -53,8 +52,7 @@ export default class Checklist extends Component {
           <Button className="resetButton" onClick={this.handleAllTasksChecked}>
             Survived the day<i className="fas fa-paw"></i>
           </Button>
-        </Section>
-        <WalkedChecklist />
+        </Section>        
       </React.Fragment>
     );
   }
