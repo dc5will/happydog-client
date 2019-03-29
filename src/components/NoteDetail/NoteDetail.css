@@ -89,7 +89,7 @@
     margin-top: 25px;
     border: 2px solid grey;
     background-color: rgba(61, 170, 76, 0.795);
-    font-size: 1em;
+    font-size: 16px;
     font-weight: bold;
     margin: 10px;
     cursor: pointer;
@@ -109,7 +109,7 @@
 .deleteNote {
     border: 2px solid grey;
     background-color: rgb(202, 55, 85);
-    font-size: 1em;
+    font-size: 16px;
     font-weight: bold;
     margin: 10px;
     margin-top: 30px;
