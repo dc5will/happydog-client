@@ -1,12 +1,30 @@
 import React from "react";
 import './CheckBox.css';
 
+export const CheckBox = props => {
+  return (
+    <li>
+      <input
+        key={props.id}
+        onChange={props.handleCheckedElement}
+        type="checkbox"
+        checked={props.isChecked}
+        value={props.value}
+      />
+      {props.value}
+    </li>
+  );
+};
+export default CheckBox;
+
+
+
 // export const CheckBox = props => {
 //   return (
 //     <div>
-//       {/* <label for={props.name} className="form-label">
+//       <label for={props.name} className="form-label">
 //         {props.title}
-//       </label> */}
+//       </label>
 //       <div className="checkbox-group">
 //         {props.meals.map(meal => {
 //           return (
@@ -31,19 +49,3 @@ import './CheckBox.css';
 // export default CheckBox;
 
 
-
-export const CheckBox = props => {
-  return (
-    <li>
-      <input
-        key={props.id}
-        onChange={props.handleCheckedElement}
-        type="checkbox"
-        checked={props.isChecked}
-        value={props.value}
-      />
-      {props.value}
-    </li>
-  );
-};
-export default CheckBox;

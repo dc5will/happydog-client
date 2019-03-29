@@ -3,86 +3,7 @@ import CheckBox from "./CheckBox";
 import "./Checklist.css";
 import WalkedChecklist from "./WalkedChecklist";
 import { Section, Button } from "../../components/Utils/Utils";
-
-// export default class Checklist extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       meals: [],
-//       walks: [],
-
-//       mealOptions: ["breakfast", "lunch", "dinner"],
-//       walkOptions: ["morning", "afternoon", "night"]
-//     };
-//     // this.handleCheckBox = this.handleSubmit.bind(this);
-//     // this.handleFormSubmit = this.handleFormSubmit.bind(this);
-//   }
-
-//   handleFormSubmit = e => {
-//     e.preventDefault();
-//     const mealsData = this.state.meals;
-//     const walksData = this.state.walks;
-//     // Use API service
-//   };
-
-//   handleCheckBox(e) {
-//     const newSelection = e.target.value;
-//     let newSelectionArray;
-
-//     if (this.state.meals.indexOf(newSelection) > -1) {
-//       newSelectionArray = this.state.meals.filter(s => s !== newSelection);
-//     } else {
-//       newSelectionArray = [...this.state.meals, newSelection];
-//     }
-
-//     this.setState(prevState => ({
-//       meals: { ...prevState, meals: newSelectionArray },
-//       walks: { ...prevState, walks: newSelectionArray }
-//     }));
-//   }
-
-//   // clear the state
-//   handleClearForm(e) {
-//     e.preventDefault();
-//     this.setState({
-//       meals: [],
-//       walks: []
-//     });
-//   }
-
-//   render() {
-//     console.log(this.state.meals);
-//     return (
-//       <React.Fragment>
-//         <Section className="checkList">
-//           <header>
-//             <h3>Have they eaten?</h3>
-//           </header>
-
-//           <form onSubmit={e => this.handleFormSubmit(e)}>
-//             <ul>
-//               {this.state.meals.map((meals, index) => {
-//                 return (
-//                   <CheckBox title={'meals'}
-//                     name={"meals"}
-//                     options={this.state.mealOptions}
-//                     selectedOptions={this.state.meals}
-//                     handleChange={this.handleCheckBox}
-//                   />
-//                 );
-//               })}
-//             </ul>
-//           </form>
-//           <Button className="formSubmitButton" onClick={this.handleFormSubmit}>
-//             Survived the day
-//           </Button>
-//         </Section>
-//         <WalkedChecklist />
-//       </React.Fragment>
-//     );
-//   }
-// }
-
+// import ChecklistApiService from "../../services/checklist-api-service";
 
 export default class Checklist extends Component {
   constructor(props) {
@@ -138,3 +59,113 @@ export default class Checklist extends Component {
     );
   }
 }
+
+
+// export default class Checklist extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       meals: null,
+//       walks: null,
+
+//       mealOptions: ["Breakfast", "Lunch", "Dinner"],
+//       walkOptions: ["morning", "afternoon", "night"]
+//     };
+//     // this.handleCheckBox = this.handleSubmit.bind(this);
+//     // this.handleFormSubmit = this.handleFormSubmit.bind(this);
+//   }
+
+//   componentDidMount() {
+//     ChecklistApiService.getAllChecked("eaten").then(value => {
+//       this.setState({
+//         meals: value
+//       });
+//     });
+//   }
+
+//   handleFormSubmit = e => {
+//     e.preventDefault();
+//     const mealsData = this.state.meals;
+//     const walksData = this.state.walks;
+//     ChecklistApiService.postChecked("eaten").then(value => {
+//       this.setState({
+//         meals: value
+//       });
+//       console.log(value);
+//     });
+//   };
+
+//   handleCheckBox(e) {
+//     const newSelection = e.target.value;
+//     let newSelectionArray;
+
+//     this.setState({
+//       meals: newSelection
+//     });
+
+//     // if (this.state.meals.indexOf(newSelection) > -1) {
+//     //   newSelectionArray = this.state.meals.filter(s => s !== newSelection);
+//     // } else {
+//     //   newSelectionArray = [...this.state.meals, newSelection];
+//     // }
+
+//     // this.setState(prevState => ({
+//     //   meals: { ...prevState, meals: newSelectionArray },
+//     //   walks: { ...prevState, walks: newSelectionArray }
+//     // }));
+//   }
+
+//   // clear the state
+//   handleClearForm(e) {
+//     // e.preventDefault();
+//     this.setState({
+//       meals: '',
+//     });
+//   }
+
+//   render() {
+//     let form;
+//     if (this.state.meals) {
+//       form = (
+//         <form onSubmit={e => this.handleFormSubmit(e)}>
+//           <ul>
+//             {this.state.mealOptions.map((meals, index) => {
+//               return (
+//                 <CheckBox
+//                   value={meals}
+//                   name={meals}
+//                   options={this.state.mealOptions}
+//                   selectedOptions={this.state.meals}
+//                   handleChange={this.handleCheckBox.bind(this)}
+//                 />
+//               );
+//             })}
+//           </ul>
+//           <Button type="submit" className="formSubmitButton">
+//             Survived the day
+//           </Button>
+//         </form>
+//       );
+//     } else {
+//       form = (
+//       <>
+//       <div>Dog has eaten</div>
+//       <Button onClick={this.handleClearForm} className="formSubmitButton">
+//       Survived the day
+//     </Button>
+//     </>)
+//     }
+
+//     return (
+//       <React.Fragment>
+//         <Section className="checkList">
+//           <header>
+//             <h3>Have they eaten?</h3>
+//           </header>
+//           {form}
+//         </Section>
+//         <WalkedChecklist />
+//       </React.Fragment>
+//     );
+//   }
+// }
