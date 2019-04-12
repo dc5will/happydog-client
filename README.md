@@ -1,3 +1,5 @@
+# Happy Dog
+### https://happydog-app.dc5will.now.sh/
 
 
 ## Introduction
@@ -24,7 +26,6 @@ Take the guesswork out of making sure your dogs are happy by keeping track of al
 ![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/taskpage.jpg)
 
 
-
 ## Setting Up
 
 - `git clone git@github.com:dc5will/happydog-server.git`
@@ -49,3 +50,15 @@ Take the guesswork out of making sure your dogs are happy by keeping track of al
 
 - Start application for development: `npm run dev`
 - Run tests: `npm test`
+
+## Server / API
+
+- https://github.com/dc5will/happydog-server
+- https://mighty-escarpment-98165.herokuapp.com/
+
+## Technologies & Tools Used
+
+- Client: HTML, CSS, JavaScript, React.js and deployed using Zeit's Now.
+
+- Server / API: Node.js, Express, Knex, Bcrypt, Helmet, JWT, Morgan, Postgrator, Mocha, Chai, Enzyme, Supertest, PostgresQL and deployed using Heroku
+
