@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+Take the guesswork out of making sure your dogs are happy by keeping track of all of their basic needs. Ensure someone in your family takes care of your furry friend's basic needs and more. Sometimes life is hectic and we're not sure if our furry family members have been taken care of. Utilize the easy to use daily checklist with your family to make sure someone in your family has fed and/or walked your dog. Keep secured important notes and tasks for your dog. Consolidate notes of your dog's most important needs and assign tasks with dates in order to keep your dog healthy and happy.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Landing Page
+![alt text](https://github.com/dc5will/happydog-client/blob/master/landingpage.jpg)
 
-### `npm test`
+### Home Page for Checklist
+![alt text](https://github.com/dc5will/happydog-client/blob/master/homepage1.jpg)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Home Page for Tasks
+![alt text](https://github.com/dc5will/happydog-client/blob/master/homepage2.jpg)
 
-### `npm run build`
+### Task Page
+![alt text](https://github.com/dc5will/happydog-client/blob/master/taskpage.jpg)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Setting Up
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `git clone git@github.com:dc5will/happydog-server.git`
+- Install dependencies: `npm install`
+- Create development and test databases: `createdb happydog`, `createdb happydog-test`
+- Create database user: `createuser happydog`
+- Grant privileges to new user in `psql`:
+  - `GRANT ALL PRIVILEGES ON DATABASE happydog TO happydog`
+  - `GRANT ALL PRIVILEGES ON DATABASE happydog-test TO happydog` or `GRANT ALL PRIVILEGES ON DATABASE "happydog-test" TO happydog`;
+- Prepare environment file: `cp example.env .env`
+  - Replace values in `.env` with your custom values if necessary.
+- Bootstrap development database: `MIGRATION_DB_NAME=happydog npm run migrate`
+- Bootstrap test database: `MIGRATION_DB_NAME=happydog-test npm run migrate`
 
-### `npm run eject`
+## Sample Data
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- To seed the database for development: `psql -U happydog -d happydog -a -f seeds/seed.happydog_tables.sql`
+- To clear seed data: `psql -U happydog -d happydog -a -f seeds/trunc.happydog_tables.sql`
+- To seed the database for testing: `psql -U happydog -d happydog-test -a -f seeds/seed.happydog_tables_test.sql`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Start application for development: `npm run dev`
+- Run tests: `npm test`
