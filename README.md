@@ -6,16 +6,23 @@ Take the guesswork out of making sure your dogs are happy by keeping track of al
 
 
 ### Landing Page
-![alt text](https://github.com/dc5will/happydog-client/blob/master/landingpage.jpg)
+![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/landingpage.jpg)
+
+### Registration
+![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/register.jpg)
+
+### Login
+![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/login.jpg)
 
 ### Home Page for Checklist
-![alt text](https://github.com/dc5will/happydog-client/blob/master/homepage1.jpg)
+![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/homepage1.jpg)
 
 ### Home Page for Tasks
-![alt text](https://github.com/dc5will/happydog-client/blob/master/homepage2.jpg)
+![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/homepage2.jpg)
 
 ### Task Page
-![alt text](https://github.com/dc5will/happydog-client/blob/master/taskpage.jpg)
+![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/taskpage.jpg)
+
 
 
 ## Setting Up
