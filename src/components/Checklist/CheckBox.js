@@ -18,7 +18,6 @@ export const CheckBox = props => {
 export default CheckBox;
 
 
-
 // export const CheckBox = props => {
 //   return (
 //     <div>

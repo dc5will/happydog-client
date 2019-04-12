@@ -48,7 +48,6 @@ export default class ViewNotes extends Component {
             </Button>
           </Link>
         </Section>
-
         <Footer />
       </React.Fragment>
     );

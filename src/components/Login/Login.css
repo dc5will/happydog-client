@@ -1,4 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body, #root {
+    height: 100%;
+    min-height: 500px;
+}
+
 .loginForm {
+    min-height: 400px;
     margin-bottom: 30px;
 }
 
@@ -18,13 +29,14 @@
     transform: translateY(2px);
 }
 
-
-
 label {
     font-size: 20px;
 }
 
-h3 {
+h2 {
     margin: 40px;
 }
 
+.LoginPage {
+    height: calc(100% - 130px);
+}

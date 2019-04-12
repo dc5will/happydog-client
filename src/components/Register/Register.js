@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import AuthApiService from "../../services/auth-api-service";
-import { Section, Button, Required, Input } from "../Utils/Utils";
+import { Button, Required, Input } from "../Utils/Utils";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import NotesContext from "../../contexts/NotesContext";
@@ -41,7 +41,7 @@ class Register extends Component {
     return (
       <>
         <Header />
-        <Section className="Registration">
+        <section className="Registration">
           <h2>Welcome to Happydog</h2>
           <h3>Please enter your information to sign up!</h3>
           <form className="RegistrationForm" onSubmit={this.handleSubmit}>
@@ -85,7 +85,7 @@ class Register extends Component {
               Register <i className="fas fa-user-plus" />
             </Button>
           </form>
-        </Section>
+        </section>
         <Footer />
       </>
     );

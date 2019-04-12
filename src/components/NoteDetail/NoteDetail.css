@@ -126,6 +126,10 @@
     transform: translateY(2px);
 }
 
+.NoteDetail {
+    height: calc(100% - 130px);
+}
+
 .fa-folder-minus {
     margin-left: 5px;
 }

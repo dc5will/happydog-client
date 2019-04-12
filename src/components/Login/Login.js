@@ -3,7 +3,7 @@ import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import NotesContext from "../../contexts/NotesContext";
 import Header from "../../components/Header/Header";
-import { Input, Button, Section } from "../../components/Utils/Utils";
+import { Input, Button } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
 import "./Login.css";
 
@@ -29,7 +29,6 @@ class Login extends Component {
         password.value = "";
         TokenService.saveAuthToken(res.authToken);
         const user = TokenService.getUserFromToken();
-        // console.log(user);
         this.context.user = user.full_name;
         this.props.history.push("/my-notes");
         this.context.getNotes();
@@ -45,7 +44,7 @@ class Login extends Component {
     return (
       <>
         <Header />
-        <Section className="LoginPage">
+        <section className="LoginPage">
           <h2>Welcome back!</h2>
           <h3>Please log in below:</h3>
           <form className="loginForm" onSubmit={this.handleSubmitJwtAuth}>
@@ -73,7 +72,7 @@ class Login extends Component {
               Login <i className="fas fa-sign-in-alt" />
             </Button>
           </form>
-        </Section>
+        </section>
         <Footer />
       </>
     );

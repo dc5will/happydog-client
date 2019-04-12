@@ -2,7 +2,6 @@
     padding: 40px;
 }
 
-
 .addNoteSubmit {
     margin: 40px;
     font-size: 24px;
@@ -49,4 +48,8 @@
 .titleLabel {
     font-weight: bold;
     font-size: 20px;
+}
+
+.AddNote {
+    height: calc(100% - 130px);
 }

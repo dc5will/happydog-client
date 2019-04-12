@@ -45,16 +45,18 @@ class App extends Component {
   };
 
   componentDidMount() {
-    try {
-      this.state.getNotes();
-      const user = TokenService.getUserFromToken();
-      this.setState({
-        user: user.full_name
-      });
-    } catch (error) {
-      this.setState({
-        error: null
-      });
+    if (TokenService.hasAuthToken()) {
+      try {
+        this.state.getNotes();
+        const user = TokenService.getUserFromToken();
+        this.setState({
+          user: user.full_name
+        });
+      } catch (error) {
+        this.setState({
+          error: null
+        });
+      }    
     }
   }
 

@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import NotesContext from "../../contexts/NotesContext";
 import NotesApiService from "../../services/notes-api-service";
 import Header from "../../components/Header/Header";
-import { Section } from "../../components/Utils/Utils";
 import Footer from "../../components/Footer/Footer";
-// import { Link } from "react-router-dom";
 import "./NoteDetail.css";
 
 class NoteDetail extends Component {
@@ -18,7 +16,6 @@ class NoteDetail extends Component {
     e.preventDefault();
     const { comments, dueDate } = e.target;
     const noteId = this.props.match.params.noteId;
-    // console.log(dueDate.value);
     NotesApiService.postNewComment(noteId, comments.value, dueDate.value)
       .then(comment =>
         this.setState({
@@ -96,7 +93,7 @@ class NoteDetail extends Component {
           <h1 className="taskHeader">{displayTaskName[0] ? displayTaskName[0].name : null}</h1>
         </section>
 
-        <Section>
+        <section className='NoteDetail'>
           <ul>{comments}</ul>
           <form id="commentsForm" onSubmit={e => this.submitComment(e)}>
             Enter Task:
@@ -123,7 +120,7 @@ class NoteDetail extends Component {
               Delete <i className="fas fa-folder-minus" />
             </button>
           </form>
-        </Section>
+        </section>
         <Footer />
       </React.Fragment>
     );
