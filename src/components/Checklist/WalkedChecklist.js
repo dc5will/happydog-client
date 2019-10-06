@@ -34,7 +34,7 @@ export default class WalkedChecklist extends Component {
       <React.Fragment>
         <div className="checkList">
         <header>
-          <h3>Have they been walked?</h3>
+          <h3>Walked?</h3>
         </header>
           <ul>
             {this.state.walked.map((walked, index) => {
@@ -48,7 +48,7 @@ export default class WalkedChecklist extends Component {
             })}
           </ul>
           <Button className="resetButton" onClick={this.handleAllWalkedChecked}>
-            Successfully Walked <i className="fas fa-dog"></i>
+            Walked <i className="fas fa-dog"></i>
           </Button>
         </div>
       </React.Fragment>

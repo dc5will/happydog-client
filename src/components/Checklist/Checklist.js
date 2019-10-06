@@ -36,7 +36,7 @@ export default class Checklist extends Component {
       <React.Fragment>
         <div className="checkList">
           <header>
-            <h3>Have they eaten?</h3>
+            <h3>Eaten?</h3>
           </header>
           <ul>
             {this.state.tasks.map((tasks, index) => {
@@ -50,7 +50,7 @@ export default class Checklist extends Component {
             })}
           </ul>
           <Button className="resetButton" onClick={this.handleAllTasksChecked}>
-            Survived the day<i className="fas fa-paw"></i>
+            Survived<i className="fas fa-paw"></i>
           </Button>
         </div>        
       </React.Fragment>

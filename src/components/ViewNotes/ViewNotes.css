@@ -27,7 +27,14 @@
 ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+}
+
+li {
+    justify-content: left;
+    list-style: none;
+    text-align: left;
+    margin-left: 60px;
 }
 
 .addNotesFolder {
@@ -55,7 +62,6 @@ ul {
     background-color: rgb(224, 194, 129);
     flex-direction: row;
     justify-content: center;
-    width: 100vw;
 }
 
 
