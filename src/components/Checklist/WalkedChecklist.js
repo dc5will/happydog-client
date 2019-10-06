@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CheckBox from "./CheckBox";
-import { Button } from "../../components/Utils/Utils";
+import { Button, Section } from "../../components/Utils/Utils";
 
 export default class WalkedChecklist extends Component {
   constructor(props) {
@@ -32,10 +32,10 @@ export default class WalkedChecklist extends Component {
   render() {
     return (
       <React.Fragment>
+        <div className="checkList">
         <header>
           <h3>Have they been walked?</h3>
         </header>
-        <div className="checkList">
           <ul>
             {this.state.walked.map((walked, index) => {
               return (

@@ -30,8 +30,6 @@ ul {
     justify-content: center;
 }
 
-
-
 .addNotesFolder {
     margin-top: 10px;
     margin-bottom: 25px;
@@ -51,4 +49,13 @@ ul {
     box-shadow: 0 5px #666;
     transform: translateY(2px);
 }
+
+.checklist-container {
+    display: flex;
+    background-color: rgb(224, 194, 129);
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+}
+
 
