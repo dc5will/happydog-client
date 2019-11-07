@@ -73,7 +73,7 @@ Take the guesswork out of making sure your dogs are happy by keeping track of al
 - [Supertest](https://www.npmjs.com/package/supertest/) - Testing
 - [Heroku](https://www.heroku.com/)
 
-### Resources
+## Resources
 - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 - [AirBnB Coding Standards](https://github.com/airbnb/javascript)
 
