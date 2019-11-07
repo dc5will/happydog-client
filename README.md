@@ -1,30 +1,27 @@
 # Happy Dog
 ### https://happydog-app.dc5will.now.sh/
 
+## Objective
+Build a full stack web application with React, Node, Express, CSS3 and PostgreSQL. 
 
 ## Introduction
 
 Take the guesswork out of making sure your dogs are happy by keeping track of all of their basic needs. Ensure someone in your family takes care of your furry friend's basic needs and more. Sometimes life is hectic and we're not sure if our furry family members have been taken care of. Utilize the easy to use daily checklist with your family to make sure someone in your family has fed and/or walked your dog. Keep secured important notes and tasks for your dog. Consolidate notes of your dog's most important needs and assign tasks with dates in order to keep your dog healthy and happy.
 
+## Screenshots
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ### Landing Page
 ![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/landingpage.jpg)
 
-### Registration
-![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/register.jpg)
-
 ### Login
 ![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/login.jpg)
 
-### Home Page for Checklist
-![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/homepage1.jpg)
-
-### Home Page for Tasks
+### Dashboard
 ![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/homepage2.jpg)
 
 ### Task Page
 ![Alt text](https://github.com/dc5will/happydog-client/blob/master/screenshots/taskpage.jpg)
-
 
 ## Setting Up
 
@@ -56,9 +53,27 @@ Take the guesswork out of making sure your dogs are happy by keeping track of al
 - https://github.com/dc5will/happydog-server
 - https://mighty-escarpment-98165.herokuapp.com/
 
-## Technologies & Tools Used
+## Tech/framework used
 
-- Client: HTML, CSS, JavaScript, React.js and deployed using Zeit's Now.
+### Client
+- [React](https://github.com/facebook/react)
+- [React Context](https://reactjs.org/docs/context.html)
+- [Jest](https://jestjs.io/) - Testing
+- [Enzyme](https://airbnb.io/enzyme/) - Testing
+- [Zeit](https://zeit.co/)
 
-- Server / API: Node.js, Express, Knex, Bcrypt, Helmet, JWT, Morgan, Postgrator, Mocha, Chai, Enzyme, Supertest, PostgresQL and deployed using Heroku
+### Server
+- [Node](https://github.com/nodejs/node)
+- [NPM](https://www.npmjs.com/)
+- [Express.js](https://github.com/expressjs/express)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Knex.js](https://knexjs.org/)
+- [Mocha](https://mochajs.org/) - Testing
+- [Chai](https://www.chaijs.com/) - Testing
+- [Supertest](https://www.npmjs.com/package/supertest/) - Testing
+- [Heroku](https://www.heroku.com/)
+
+### Resources
+- [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+- [AirBnB Coding Standards](https://github.com/airbnb/javascript)
 
