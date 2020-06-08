@@ -29,13 +29,10 @@ export default class ViewNotes extends Component {
           <h2 className="welcomeBanner">Welcome back {this.context.user}!</h2>
         </section>
 
-        <Section>
-          <Checklist />
-        </Section>
-
-        <Section>
+        {/* <div className="checklist-container">
           <WalkedChecklist />
-        </Section>
+          <Checklist />
+        </div> */}
 
         <Section className="importantNotes">
           <header>

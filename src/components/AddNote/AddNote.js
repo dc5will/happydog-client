@@ -39,7 +39,7 @@ export default class AddNote extends Component {
             </Button>
           </form>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }
