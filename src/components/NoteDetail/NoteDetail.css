@@ -82,8 +82,14 @@
 
 .taskList {
     margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.noteDetails-list {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .addTaskButton {
     margin-top: 25px;

@@ -29,10 +29,10 @@ export default class ViewNotes extends Component {
           <h2 className="welcomeBanner">Welcome back {this.context.user}!</h2>
         </section>
 
-        <div className="checklist-container">
+        {/* <div className="checklist-container">
           <WalkedChecklist />
           <Checklist />
-        </div>
+        </div> */}
 
         <Section className="importantNotes">
           <header>
@@ -45,7 +45,7 @@ export default class ViewNotes extends Component {
             </Button>
           </Link>
         </Section>
-        {/* <Footer /> */}
+        <Footer />
       </React.Fragment>
     );
   }
