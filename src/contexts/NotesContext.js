@@ -70,7 +70,7 @@ export class NotesContextProvider extends Component {
       deleteNote: this.deleteNote,
       clearNotes: this.clearNotes,
       setError: this.setError,
-      clearError: this.clearError,
+      clearError: this.clearError
     };
 
     return (
